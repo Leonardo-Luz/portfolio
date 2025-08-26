@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client'
+
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Link, usePathname } from "@/i18n/navigation";
 import { ReactNode } from "react";
 
 export function NavLink({ href, children }: { href: string, children: ReactNode }) {
@@ -9,8 +9,7 @@ export function NavLink({ href, children }: { href: string, children: ReactNode 
 
   return (
     <Button
-      variant="outline"
-      className={cn(pathname == href && "text-accent bg-accent-foreground")}
+      variant={pathname === href ? "default" : "outline"}
       asChild
     >
       <Link href={href}>{children}</Link>

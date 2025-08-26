@@ -1,0 +1,14 @@
+[
+  {
+    "school": "Instituo Federal do Rio Grande do Sul - Campus Osório",
+    "interval": "2023 - 2025",
+    "degre": {
+      "en": "Tecnólogo",
+      "pt": "Tecnologo"
+    },
+    "description": {
+      "en": "lorem ipsum",
+      "pt": "lorem ipsum"
+    }
+  }
+]

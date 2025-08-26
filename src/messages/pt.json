@@ -1,32 +1,32 @@
 {
   "global": {
-    "pt_br": "Portuguese Brazil",
-    "en": "English",
-    "project": "Project",
-    "projects": "Projects"
+    "pt_br": "Português Brasil",
+    "en": "Inglês",
+    "project": "Projeto",
+    "projects": "Projetos"
   },
   "about_me": {
-    "education": "Education",
-    "introduction": "Introduction",
+    "education": "Educação",
+    "introduction": "Introdução",
     "introduction_desc": "lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum",
-    "career": "Fullstack Developer"
+    "career": "Desenvolvedor Fullstack"
   },
   "header": {
-    "about": "About Me",
-    "home": "Home",
-    "projects": "Projects"
+    "about": "Sobre Mim",
+    "home": "Início",
+    "projects": "Projetos"
   },
   "options": {
-    "settings": "Settings",
-    "toggle_theme": "Change Theme",
-    "toggle_language": "Change Language"
+    "settings": "Configurações",
+    "toggle_theme": "Mudar Tema",
+    "toggle_language": "Mudar Linguagem"
   },
   "project": {
-    "more": "More",
-    "all": "All",
+    "more": "Mais",
+    "all": "Todos",
     "fullstack": "Fullstack",
     "frontend": "Frontend",
     "backend": "Backend",
-    "misc": "Misc"
+    "misc": "Outros"
   }
 }

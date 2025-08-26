@@ -1,0 +1,90 @@
+'use client'
+
+import { ProjectCard } from "@/components/project/ProjectCard";
+import { ProjectHeader } from "@/components/project/ProjectsHeader";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useProjects } from "@/hooks/useProjects";
+import { useLocale, useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
+import { useState } from "react";
+
+const tags = ["all", "frontend", "backend", "fullstack", "misc"];
+
+export default function Home() {
+  const { allProjects: projects } = useProjects();
+  const t = useTranslations("project");
+  const locale = useLocale() as "pt" | "en";
+
+  const params = useSearchParams();
+  const defaultTab = "all";
+
+  const [curTab, setCurTab] = useState(params.get("tag") ?? defaultTab)
+
+  const [search, setSearch] = useState("");
+
+  return (
+    <div className="mt-20 mb-8 flex flex-col justify-center items-center h-full w-full">
+      <ProjectHeader tag={curTab} />
+      <Tabs defaultValue={tags.includes(curTab) ? curTab : defaultTab} className="w-full">
+        <TabsList className="mb-8 self-center w-[60%] flex flex-row justify-between">
+          <div className="flex flex-row gap-3">
+            {
+              tags.map((tag, index) => (
+                <TabsTrigger onClick={() => setCurTab(tag)} key={index} className="cursor-pointer" value={tag}>
+                  {t(tag)}
+                </TabsTrigger>
+              ))
+            }
+          </div>
+          <Input
+            type="text"
+            className="w-[40%] text-right"
+            placeholder="...search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </TabsList>
+        {
+          tags.map((tag, index) => (
+            <TabsContent
+              key={index}
+              value={tag}
+              className="flex flex-col w-full justify-center items-center gap-8"
+            >
+              {
+                projects
+                  .filter((project) => tag === "all" || project.tag === tag)
+                  .filter((project) => {
+                    const titleMatch = project.title[locale].toLowerCase().includes(search.toLowerCase());
+                    const techMatch = project.tecnologies.some((tech) =>
+                      tech.toLowerCase().includes(search.toLowerCase())
+                    );
+                    const tagMatch = project.tag.toLowerCase().includes(search.toLowerCase());
+
+                    return titleMatch || techMatch || tagMatch;
+                  })
+                  .map((project, index) => (
+                    <ProjectCard
+                      key={project.id}
+                      id={project.id}
+                      tag={project.tag}
+                      title={project.title}
+                      description={project.description}
+                      imageUrl={project.imageUrl}
+                      tecnologies={project.tecnologies}
+                      stars={project.stars}
+                      gitLink={project.gitLink}
+                      projectLink={project.projectLink}
+                      invert={index % 2 === 0}
+                    />
+                  ))
+              }
+            </TabsContent>
+          ))
+        }
+      </Tabs>
+    </div>
+  );
+}
+

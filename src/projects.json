@@ -1,11 +1,85 @@
 [
   {
-    "title": "",
-    "description": "",
-    "tecnologies": [],
-    "imageUrl": "",
-    "gitLink": "",
+    "tag": "frontend",
+    "title": {
+      "en": "Websocket",
+      "pt": "Websocket"
+    },
+    "description": {
+      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
+      "pt": "Texto Placeholder"
+    },
+    "gitLink": "https://github.com/leonardo-luz",
     "projectLink": "",
-    "stars": 5
+    "imageUrl": "",
+    "tecnologies": [ "React", "Typescript", "Node" ],
+    "stars": 3
+  },
+
+  {
+    "tag": "backend",
+    "title": {
+      "en": "Simple Websocket Server",
+      "pt": "Servidor Websocket Simples"
+    },
+    "description": {
+      "en": "This project was made in golang to study websockets using the library gorilla websocket",
+      "pt": "Este Projeto foi feito em golang para estudar websockets usando a biblioteca gorilla websocket"
+    },
+    "gitLink": "https://github.com/leonardo-luz",
+    "projectLink": "https://github.com/leonardo-luz",
+    "imageUrl": "",
+    "tecnologies": [ "Golang", "gorilla/websocket" ],
+    "stars": 0
+  },
+
+  {
+    "tag": "fullstack",
+    "title": {
+      "en": "Other Project",
+      "pt": "Outro Projeto"
+    },
+    "description": {
+      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
+      "pt": "Texto Placeholder"
+    },
+    "gitLink": "https://github.com/leonardo-luz",
+    "projectLink": "https://github.com/leonardo-luz",
+    "imageUrl": "",
+    "tecnologies": [ "React", "Typescript", "Node" ],
+    "stars": 12
+  },
+  {
+    "tag": "fullstack",
+    "title": {
+      "en": "Other Project",
+      "pt": "Outro Projeto"
+    },
+    "description": {
+      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
+      "pt": "Texto Placeholder"
+    },
+    "gitLink": "https://github.com/leonardo-luz",
+    "projectLink": "https://github.com/leonardo-luz",
+    "imageUrl": "",
+    "tecnologies": [ "React", "Typescript", "Node" ],
+    "stars": 12
+  },
+  {
+    "tag": "fullstack",
+    "title": {
+      "en": "Other Project",
+      "pt": "Outro Projeto"
+    },
+    "description": {
+      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
+      "pt": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains "
+    },
+    "gitLink": "https://github.com/leonardo-luz",
+    "projectLink": "https://github.com/leonardo-luz",
+    "imageUrl": "",
+    "tecnologies": [ "React", "Typescript", "Node" ],
+    "stars": 12
   }
 ]
+

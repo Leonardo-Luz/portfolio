@@ -8,7 +8,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import React from 'react';
 import { notFound } from 'next/navigation';
 import en from '@/messages/en.json';
-import pt from '@/messages/pt_br.json';
+import pt from '@/messages/pt.json';
+import { Providers } from "./providers";
 
 const firaCode = Fira_Code({
   variable: '--font-fira-code',
@@ -22,25 +23,27 @@ export const metadata: Metadata = {
 
 const messagesMap: Record<string, any> = { en, pt };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>
 }) {
-  const messages = messagesMap[locale];
+  const messages = messagesMap[(await params).locale];
   if (!messages) notFound();
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${firaCode.variable} antialiased flex flex-col justify-between items-center h-screen w-screen`}
+        className={`${firaCode.variable} antialiased flex flex-col justify-between items-center min-h-screen w-screen`}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+        <NextIntlClientProvider locale={(await params).locale} messages={messages}>
+          <Providers>
+            <Header />
+            {children}
+            <Footer />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>
