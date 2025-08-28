@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { usePathname, Link } from "@/i18n/navigation";
 import { LanguageMenuItem } from "./LanguageMenuItem";
+import { GithubAuthMenuItem } from "./GithubAuthMenuItem";
 
 export function Options() {
   const pathname = usePathname()
@@ -49,6 +50,7 @@ export function Options() {
               </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuSub>
+          <GithubAuthMenuItem />
           <DropdownMenuItem
             className="flex flex-row justify-between items-center gap-8"
             onClick={() => setTheme(theme == "dark" ? "light" : theme == "light" ? "dark" : "system")}

@@ -23,7 +23,6 @@ export default function Project({ params }: ProjectProps) {
         description={project.description}
         imageUrl={project.imageUrl}
         tecnologies={project.tecnologies}
-        stars={project.stars}
         gitLink={project.gitLink}
         projectLink={project.projectLink}
       />

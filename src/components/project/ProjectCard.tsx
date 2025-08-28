@@ -7,6 +7,9 @@ import { Badge } from "../ui/badge";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
+import { useGithub } from "@/hooks/useGithub";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type ProjectCardProps = {
   id: number
@@ -15,33 +18,35 @@ type ProjectCardProps = {
   description: { en: string, pt: string },
   imageUrl: string,
   tecnologies: string[],
-  stars: number,
   gitLink?: string,
+  repo?: string
   projectLink?: string,
   invert?: boolean
 }
 
-function ProjectImage() {
-  return (
-    <Image
-      width={60}
-      height={60}
-      src="/globe.svg"
-      alt="project card"
-      className="w-[30%]"
-    />
-  )
-}
-
 export function ProjectCard(props: ProjectCardProps) {
+  const { toggleStar, repoQuery } = useGithub(props.repo!)
+  const { data: repoData, isLoading: repoIsLoading } = repoQuery
+
   const t = useTranslations("project")
   const locale = useLocale();
 
   return (
-    <div className="flex flex-row justify-between gap-8 items-center w-[60%]">
-      {
-        !props.invert && <ProjectImage />
-      }
+    <div
+      className={cn(
+        "flex gap-8 items-stretch w-[60%] max-w-5xl",
+        props.invert ? "flex-row-reverse" : "flex-row"
+      )}
+    >
+      <Card className="relative w-[30%]">
+        <Image
+          src={props.imageUrl}
+          alt="project card"
+          fill
+          className="object-cover"
+          priority
+        />
+      </Card>
       <Card className="w-[70%]">
         <CardHeader>
           <CardTitle className="text-2xl font-extrabold">
@@ -49,7 +54,7 @@ export function ProjectCard(props: ProjectCardProps) {
               props.title[locale as "pt" | "en"]
             }
           </CardTitle>
-          <CardDescription className="flex flex-row gap-2">
+          <CardDescription className="flex flex-wrap gap-2">
             <Badge variant="secondary">{props.tag}</Badge>
             {
               props.tecnologies.map(tecnology => <Badge key={tecnology} variant="default">{tecnology}</Badge>)
@@ -74,31 +79,58 @@ export function ProjectCard(props: ProjectCardProps) {
           </Button>
           {
             props.projectLink && (
-              <Button variant="outline" size="icon" asChild>
-                <a href={props.projectLink} target="_blank">
-                  <Book />
-                </a>
-              </Button>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button variant="outline" size="icon" asChild>
+                    <a href={props.projectLink} target="_blank">
+                      <Book />
+                    </a>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  {t("deploy")}
+                </TooltipContent>
+              </Tooltip>
             )
           }
           {
-            props.gitLink && (
-              <Button variant="outline" size="icon" asChild>
-                <a href={props.gitLink} target="_blank">
-                  <Github />
-                </a>
-              </Button>
+            (!repoIsLoading && props.gitLink) && (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button variant="outline" size="icon" asChild>
+                    <a href={props.gitLink} target="_blank">
+                      <Github />
+                    </a>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  {t("repository")}
+                </TooltipContent>
+              </Tooltip>
             )
           }
-          <Button variant="outline">
-            <Star />
-            <span>{props.stars}</span>
-          </Button>
+          {
+            (!repoIsLoading && props.gitLink) && (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button className="group" variant="outline" onClick={() => toggleStar()}>
+                    {
+                      repoData?.starred ?
+                        <Star className="fill-current text-foreground group-hover:text-accent-foreground" />
+                        :
+                        <Star />
+                    }
+                    <span>{repoData?.stargazers_count != undefined ? repoData?.stargazers_count : "-"}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  {t(repoData?.starred ? "starred" : "star")}
+                </TooltipContent>
+              </Tooltip>
+            )
+          }
         </CardFooter>
       </Card>
-      {
-        props.invert && <ProjectImage />
-      }
     </div>
   )
 }

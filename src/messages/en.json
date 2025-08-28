@@ -9,7 +9,9 @@
     "education": "Education",
     "introduction": "Introduction",
     "introduction_desc": "lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum",
-    "career": "Fullstack Developer"
+    "career": "Fullstack Developer",
+    "phone_toast": "Phone Number copied to clipboard",
+    "phone": "Phone Number"
   },
   "header": {
     "about": "About Me",
@@ -19,7 +21,9 @@
   "options": {
     "settings": "Settings",
     "toggle_theme": "Change Theme",
-    "toggle_language": "Change Language"
+    "toggle_language": "Change Language",
+    "github_login": "Log in to GitHub",
+    "github_logout": "Log out of GitHub"
   },
   "project": {
     "more": "More",
@@ -27,6 +31,20 @@
     "fullstack": "Fullstack",
     "frontend": "Frontend",
     "backend": "Backend",
-    "misc": "Misc"
+    "misc": "Misc",
+    "search": "Search project by title, tag or technology...",
+    "star": "Star",
+    "starred": "Starred",
+    "repository": "Git Repository",
+    "deploy": "Link"
+  },
+  "toast": {
+    "phone_to_clipboard": "",
+    "rate_limit_mess": "Rate limit exceeded.",
+    "rate_limit_desc_1": "Try again at",
+    "rate_limit_desc_2": "Try again later",
+    "fetch_fail": "Failed to fetch repo",
+    "unstar_fail": "",
+    "star_fail": ""
   }
 }

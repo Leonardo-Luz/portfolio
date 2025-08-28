@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation';
 import en from '@/messages/en.json';
 import pt from '@/messages/pt.json';
 import { Providers } from "./providers";
+import { Toaster } from "@/components/ui/sonner";
 
 const firaCode = Fira_Code({
   variable: '--font-fira-code',
@@ -36,17 +37,22 @@ export default async function LocaleLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${firaCode.variable} antialiased flex flex-col justify-between items-center min-h-screen w-screen`}
+        className={`${firaCode.variable} antialiased`}
       >
         <NextIntlClientProvider locale={(await params).locale} messages={messages}>
           <Providers>
-            <Header />
-            {children}
-            <Footer />
+            <div className="flex flex-col justify-between items-center min-h-screen w-screen">
+              <Header />
+              {children}
+              <div className="w-full">
+                <Footer />
+                <Toaster />
+              </div>
+            </div>
           </Providers>
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }
 

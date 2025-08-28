@@ -2,18 +2,18 @@
   {
     "tag": "frontend",
     "title": {
-      "en": "Websocket",
-      "pt": "Websocket"
+      "en": "Libras Guess Game",
+      "pt": "Jogo de Adivinhação de Libras"
     },
     "description": {
-      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
-      "pt": "Texto Placeholder"
+      "en": "Interactive game developed as a group project for a Libras (Brazilian Sign Language) course. Its goal is to assist in learning the manual alphabet this Language. It's inspired by the popular game Wordle.",
+      "pt": "Jogo interativo desenvolvido em grupo como parte da disciplina de Libras, que tem como objetivo auxiliar no aprendizado do alfabeto manual da Língua Brasileira de Sinais (Libras). É inspirado no popular jogo term.ooo."
     },
-    "gitLink": "https://github.com/leonardo-luz",
-    "projectLink": "",
-    "imageUrl": "",
-    "tecnologies": [ "React", "Typescript", "Node" ],
-    "stars": 3
+    "gitLink": "https://github.com/Leonardo-Luz/react-ts-libras-guess-game",
+    "repo": "react-ts-libras-guess-game",
+    "projectLink": "https://react-ts-libras-guess-game.vercel.app",
+    "imageUrl": "/images/libras.png",
+    "tecnologies": [ "React", "Typescript", "Tailwind", "Shadcn/ui" ]
   },
 
   {
@@ -26,11 +26,10 @@
       "en": "This project was made in golang to study websockets using the library gorilla websocket",
       "pt": "Este Projeto foi feito em golang para estudar websockets usando a biblioteca gorilla websocket"
     },
-    "gitLink": "https://github.com/leonardo-luz",
-    "projectLink": "https://github.com/leonardo-luz",
-    "imageUrl": "",
-    "tecnologies": [ "Golang", "gorilla/websocket" ],
-    "stars": 0
+    "gitLink": "https://github.com/Leonardo-Luz/snake.nvim",
+    "repo": "snake.nvim",
+    "imageUrl": "/globe.svg",
+    "tecnologies": [ "Golang", "gorilla/websocket" ]
   },
 
   {
@@ -43,11 +42,8 @@
       "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
       "pt": "Texto Placeholder"
     },
-    "gitLink": "https://github.com/leonardo-luz",
-    "projectLink": "https://github.com/leonardo-luz",
-    "imageUrl": "",
-    "tecnologies": [ "React", "Typescript", "Node" ],
-    "stars": 12
+    "imageUrl": "/globe.svg",
+    "tecnologies": [ "React", "Typescript", "Node" ]
   },
   {
     "tag": "fullstack",
@@ -59,11 +55,8 @@
       "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
       "pt": "Texto Placeholder"
     },
-    "gitLink": "https://github.com/leonardo-luz",
-    "projectLink": "https://github.com/leonardo-luz",
-    "imageUrl": "",
-    "tecnologies": [ "React", "Typescript", "Node" ],
-    "stars": 12
+    "imageUrl": "/globe.svg",
+    "tecnologies": [ "React", "Typescript", "Node" ]
   },
   {
     "tag": "fullstack",
@@ -75,11 +68,34 @@
       "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
       "pt": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains "
     },
-    "gitLink": "https://github.com/leonardo-luz",
-    "projectLink": "https://github.com/leonardo-luz",
-    "imageUrl": "",
-    "tecnologies": [ "React", "Typescript", "Node" ],
-    "stars": 12
+    "imageUrl": "/globe.svg",
+    "tecnologies": [ "React", "Typescript", "Node" ]
+  },
+  {
+    "tag": "fullstack",
+    "title": {
+      "en": "Other Project",
+      "pt": "Outro Projeto"
+    },
+    "description": {
+      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
+      "pt": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains "
+    },
+    "imageUrl": "/globe.svg",
+    "tecnologies": [ "React", "Typescript", "Node" ]
+  },
+  {
+    "tag": "fullstack",
+    "title": {
+      "en": "Other Project",
+      "pt": "Outro Projeto"
+    },
+    "description": {
+      "en": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains ",
+      "pt": "lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains lorem ipsum dolor sit amet indipiscut et labore ains "
+    },
+    "imageUrl": "/globe.svg",
+    "tecnologies": [ "React", "Typescript", "Node" ]
   }
 ]
 

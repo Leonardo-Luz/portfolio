@@ -20,7 +20,7 @@ export function ProjectHeader({ tag }: ProjectHeaderProps) {
     <Card className="w-[60%] mb-8">
       <CardHeader>
         <CardTitle>{tg("projects")} - {t(tag)}</CardTitle>
-        <CardDescription className="flex flex-row gap-2">
+        <CardDescription className="flex flex-wrap gap-2">
           {
             tags.map((item, index) => (
               <Badge key={index}>{item}</Badge>

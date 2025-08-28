@@ -9,7 +9,9 @@
     "education": "Educação",
     "introduction": "Introdução",
     "introduction_desc": "lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum",
-    "career": "Desenvolvedor Fullstack"
+    "career": "Desenvolvedor Fullstack",
+    "phone_toast": "Número de Telefone copiado para a área de transferência",
+    "phone": "Número de Telefone"
   },
   "header": {
     "about": "Sobre Mim",
@@ -19,7 +21,9 @@
   "options": {
     "settings": "Configurações",
     "toggle_theme": "Mudar Tema",
-    "toggle_language": "Mudar Linguagem"
+    "toggle_language": "Mudar Linguagem",
+    "github_login": "Login no Github",
+    "github_logout": "Logout do Github"
   },
   "project": {
     "more": "Mais",
@@ -27,6 +31,11 @@
     "fullstack": "Fullstack",
     "frontend": "Frontend",
     "backend": "Backend",
-    "misc": "Outros"
+    "misc": "Outros",
+    "search": "Busque por projetos apartir do titulo, tag ou tecnologia...",
+    "star": "Star",
+    "starred": "Starred",
+    "repository": "Repositorio do Git",
+    "deploy": "Link"
   }
 }
