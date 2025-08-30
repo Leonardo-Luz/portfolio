@@ -1,0 +1,66 @@
+[
+  {
+    "tag": "frontend",
+    "title": {
+      "en": "Libras Guess Game",
+      "pt": "Jogo de Adivinhação de Libras"
+    },
+    "description": {
+      "en": "Interactive game developed as a group project for a Libras (Brazilian Sign Language) course. Its goal is to assist in learning the manual alphabet of this language. It's inspired by the popular game Wordle.",
+      "pt": "Jogo interativo desenvolvido em grupo como parte da disciplina de Libras, que tem como objetivo auxiliar no aprendizado do alfabeto manual da Língua Brasileira de Sinais (Libras). É inspirado no popular jogo Termo."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/react-ts-libras-guess-game",
+    "repo": "react-ts-libras-guess-game",
+    "projectLink": "https://react-ts-libras-guess-game.vercel.app",
+    "imageUrl": "/images/libras.png",
+    "tecnologies": [ "React", "Typescript", "Tailwind", "Shadcn/ui" ]
+  },
+
+  {
+    "tag": "backend",
+    "title": {
+      "en": "Simple Websocket Server",
+      "pt": "Servidor Websocket Simples"
+    },
+    "description": {
+      "en": "A simple WebSocket server implemented in Go to learn and experiment with WebSocket communication using the standard Go networking libraries.",
+      "pt": "Um servidor WebSocket simples desenvolvido em Go para aprender e experimentar comunicação via WebSockets utilizando as bibliotecas padrão de rede do Go."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/go-websocket-server",
+    "repo": "go-websocket-server",
+    "imageUrl": "/globe.svg",
+    "tecnologies": ["Golang", "golang.org/x/net"]
+  },
+
+  {
+    "tag": "misc",
+    "title": {
+      "en": "Passman CLI",
+      "pt": "Passman CLI"
+    },
+    "description": {
+      "en": "A Rust-based command-line tool for securely storing and managing passwords. Uses PBKDF2 with SHA-2 to derive encryption keys from a master password, and AES-GCM for authenticated encryption of stored passwords with encrypted backups.",
+      "pt": "Uma ferramenta de linha de comando desenvolvida em Rust para armazenar e gerenciar senhas de forma segura. Utiliza PBKDF2 com SHA-2 para derivar chaves a partir da senha mestre e AES-GCM para criptografia autenticada das senhas armazenadas, incluindo backups criptografados."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/rust-passman-cli",
+    "repo": "rust-passman-cli",
+    "imageUrl": "/images/passman.png",
+    "tecnologies": ["Rust", "Sqlite", "AES-GCM", "PBKDF2", "SHA-2"]
+  },
+  {
+    "tag": "misc",
+    "title": {
+      "en": "Snake.nvim",
+      "pt": "Snake.nvim"
+    },
+    "description": {
+      "en": "A classic Snake game implemented in Lua for Neovim, designed as a fun project to practice and reinforce Vim motions and keybindings.",
+      "pt": "Um jogo clássico da cobrinha desenvolvido em Lua para o Neovim, criado como um projeto divertido para praticar e reforçar movimentos e atalhos do Vim."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/snake.nvim",
+    "repo": "snake.nvim",
+    "imageUrl": "/images/snake_nvim.png",
+    "tecnologies": ["Lua", "Neovim"]
+  }
+]
+

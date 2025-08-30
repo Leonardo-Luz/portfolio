@@ -1,4 +1,6 @@
-import projects from "@/projects.json"
+import projects from "@/data/projects.json"
+
+export type Project = typeof projects[0]
 
 export function useProjects() {
   function getAllProjects() {

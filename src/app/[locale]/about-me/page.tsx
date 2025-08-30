@@ -1,100 +1,115 @@
 'use client'
 
-import { StudyCard } from "@/components/StudyCard";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Github, Linkedin, Mail, Phone, Twitch } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { ReactNode } from "react";
-import { toast } from "sonner";
-
-interface ContactLinkProps {
-  children: ReactNode;
-  href?: string;
-  tooltip: string;
-  toastMess?: string;
-  copy?: string;
-}
-
-function ContactLink({ children, href, tooltip, toastMess, copy }: ContactLinkProps) {
-
-  function handleClick() {
-    if (copy)
-      navigator.clipboard.writeText(copy)
-
-    if (toastMess)
-      toast.success(toastMess)
-  }
-
-  return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <Button
-          variant="outline"
-          size="icon"
-          asChild={!!href}
-          onClick={handleClick}
-        >
-          {
-            href ? (
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                {children}
-              </a>
-            ) : (
-              <span>{children}</span>
-            )
-          }
-        </Button>
-      </TooltipTrigger>
-      <TooltipContent>{tooltip}</TooltipContent>
-    </Tooltip>
-  );
-}
+import { DiscIcon, Github, Linkedin, Mail, Phone, Twitch } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import { Badge } from "@/components/ui/badge";
+import { useProfile } from "@/hooks/useProfile";
+import { ContactLink } from "@/components/about-me/ContactLink";
 
 export default function AboutMe() {
+  const locale = useLocale() as "pt" | "en"
+
+  const { age, tools, key_technologies, skills, linkedin, email, phone, twitch, discord, github } = useProfile()
+
   const t = useTranslations("about_me")
+  const tg = useTranslations("global")
 
   return (
-    <div className="mt-20 mb-8 flex flex-col w-full h-full justify-center items-center">
-      <Card className="w-[70%]">
+    <div className="flex flex-col w-full h-full items-center">
+      <Card className="w-[60%]">
         <CardHeader>
-          <CardTitle>Leonardo Luz Fachel</CardTitle>
-          <CardDescription>{t("career")}</CardDescription>
+          <CardTitle className="text-2xl">{t("greeter")} Leonardo Luz ({age})</CardTitle>
+          <CardDescription className="flex flex-col gap-2 mt-2">
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="secondary">{t("career")}</Badge>
+              <Badge variant="secondary">{t("tools")}</Badge>
+              {
+                tools.map((value, index) => (
+                  <Badge key={index}>{value}</Badge>
+                ))
+              }
+            </div>
+          </CardDescription>
         </CardHeader>
-        <CardContent>
-          {t("introduction_desc")}
-          <Separator className="my-6" />
+
+        <Separator />
+
+        <CardContent className="text-justify">
           {t("introduction_desc")}
         </CardContent>
-        <CardFooter className="flex flex-row justify-end items-center gap-4">
-          <ContactLink href="https://github.com/leonardo-luz" tooltip="Github">
-            <Github />
-          </ContactLink>
-          <ContactLink href="https://linkedin.com/in/leonardo-luz-fachel" tooltip="Linkedin">
-            <Linkedin />
-          </ContactLink>
-          <ContactLink href="mailto:leonardo.luz.fc@gmail.com" tooltip="Mail">
-            <Mail />
-          </ContactLink>
-          <ContactLink copy="55 51 99999-9999" toastMess={t("phone_toast")} tooltip={t("phone")}>
-            <Phone />
-          </ContactLink>
-          <ContactLink href="https://twitch.tv/dev_luz" tooltip="Twitch">
-            <Twitch />
-          </ContactLink>
+
+        <Separator />
+
+        <CardContent className="flex flex-col gap-2 text-right">
+          <CardTitle className="text-xl">{tg("technologies")}</CardTitle>
+          {
+            Object.entries(key_technologies).map(([key, values]) => (
+              <div key={key} className="flex flex-wrap justify-end gap-2">
+                <Badge className="text-sm" key={key} variant="secondary">{key}</Badge>
+                {
+                  values.map(value => (
+                    <Badge className="text-sm" key={value}>{value}</Badge>
+                  ))
+                }
+              </div>
+            ))
+          }
+        </CardContent>
+
+        <Separator />
+
+        <CardContent className="flex flex-col gap-2">
+          <CardTitle className="text-xl">{tg("skills")}</CardTitle>
+          {
+            Object.entries(skills[locale]).map(([key, values]) => (
+              <div key={key} className="flex flex-wrap gap-2">
+                <Badge className="text-sm" key={key} variant="secondary">{key}</Badge>
+                {
+                  values.map(value => (
+                    <Badge className="text-sm" key={value}>{value}</Badge>
+                  ))
+                }
+              </div>
+            ))
+          }
+        </CardContent>
+
+        <Separator />
+
+        <CardContent className="flex flex-row justify-between">
+          <span>{t("projects_flex")}</span>
+          <span>{t("study_flex")}</span>
+          <span>{t("experience_flex")}</span>
+        </CardContent>
+
+        <CardFooter className="flex flex-row justify-between items-center">
+          <div className="flex flex-row gap-4">
+            <ContactLink href={`https://github.com/${github}`} tooltip="Github">
+              <Github />
+            </ContactLink>
+            <ContactLink href={`https://linkedin.com/in/${linkedin}`} tooltip="Linkedin">
+              <Linkedin />
+            </ContactLink>
+            <ContactLink href={`mailto:${email}`} tooltip="Email">
+              <Mail />
+            </ContactLink>
+          </div>
+
+          <div className="flex flex-row gap-4">
+            <ContactLink copy={phone} toastMess={tg("clipboard_toast")} tooltip={t("phone")}>
+              <Phone />
+            </ContactLink>
+            <ContactLink copy={discord} toastMess={tg("clipboard_toast")} tooltip="Discord">
+              <DiscIcon />
+            </ContactLink>
+            <ContactLink href={`https://twitch.tv/${twitch}`} tooltip="Twitch">
+              <Twitch />
+            </ContactLink>
+          </div>
         </CardFooter>
       </Card>
-      <div className="flex flex-col gap-8 items-center w-full mt-8">
-        <h1 className="text-3xl font-extrabold">{t("education")}</h1>
-        <StudyCard
-          school="Instituo Federal do Rio Grande do Sul - Campus Osório"
-          interval="2023 - 2025"
-          degre={{ en: "Tecnólogo", pt: "Tecnologo" }}
-          description={{ en: "lorem ipsum", pt: "lorem ipsum" }}
-        />
-      </div>
     </div>
   )
 }

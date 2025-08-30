@@ -2,28 +2,33 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "./ui/badge";
 import { useLocale } from "next-intl";
 
-type StudyCardProps = {
-  school: string,
+type ExperienceCardProps = {
+  enterprise: string,
   interval: string,
-  degree: {
+  role: {
+    en: string,
+    pt: string
+  },
+  style: {
     en: string,
     pt: string
   },
   description: {
     en: string,
     pt: string
-  },
+  }
 }
 
-export function StudyCard(props: StudyCardProps) {
+export function ExperienceCard(props: ExperienceCardProps) {
   const locale = useLocale() as "pt" | "en"
 
   return (
     <Card className="w-[60%]">
       <CardHeader>
-        <CardTitle className="text-2xl font-extrabold">{props.school}</CardTitle>
+        <CardTitle className="text-2xl font-extrabold">{props.enterprise}</CardTitle>
         <CardDescription className="flex flex-row gap-2">
-          <Badge className="text-sm" variant="default">{props.degree[locale]}</Badge>
+          <Badge className="text-sm" variant="default">{props.role[locale]}</Badge>
+          <Badge className="text-sm" variant="default">{props.style[locale]}</Badge>
           <Badge className="text-sm" variant="secondary">{props.interval}</Badge>
         </CardDescription>
       </CardHeader>

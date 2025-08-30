@@ -12,16 +12,16 @@ import { ProjectPagination } from "@/components/ProjectsPagination";
 
 const tags = ["all", "frontend", "backend", "fullstack", "misc"];
 
-export default function Home() {
+export default function Projects() {
   const { allProjects: projects } = useProjects();
   const t = useTranslations("project");
   const locale = useLocale() as "pt" | "en";
 
   const params = useSearchParams();
-  const defaultTab = "all";
 
   const limit = 5;
 
+  const defaultTab = "all";
   const [curTab, setCurTab] = useState(params.get("tag") ?? defaultTab);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => setPage(1), [curTab, search]);
 
   return (
-    <div className="mt-20 mb-8 flex flex-col justify-center items-center h-full w-full">
+    <div className="flex flex-col justify-center items-center h-full w-full">
       <ProjectHeader tag={curTab} />
       <Tabs defaultValue={tags.includes(curTab) ? curTab : defaultTab} className="w-full">
         <TabsList className="mb-8 self-center w-[60%] flex flex-row justify-between">

@@ -3,27 +3,44 @@
     "pt_br": "Português Brasil",
     "en": "Inglês",
     "project": "Projeto",
-    "projects": "Projetos"
+    "projects": "Projetos",
+    "clipboard_toast": "Copiado para a área de transferência",
+    "education": "Educação",
+    "experience": "Experiência",
+    "technologies": "Tecnologias",
+    "skills": "Habilidades"
   },
   "about_me": {
-    "education": "Educação",
-    "introduction": "Introdução",
-    "introduction_desc": "lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum",
+    "greeter": "Ola, sou o",
+    "introduction_desc": "Sou estudante de Tecnologia no Instituto Federal do Rio Grande do Sul – Campus Osório (2023–2025), cursando Análise e Desenvolvimento de Sistemas. Minha experiência envolve tanto o desenvolvimento frontend quanto o backend, utilizando tecnologias como TypeScript, React, Next.js, Tailwind, Spring e Golang, além de Rust, Lua e Python em projetos diversos. No meu dia a dia, faço uso de ferramentas como Git, Docker, Neovim e Linux para otimizar o fluxo de trabalho e aumentar a produtividade. Com bases sólidas em engenharia de software, APIs RESTful, padrões de projeto, bancos de dados e containerização, busco desenvolver soluções limpas e bem estruturadas. Além da parte técnica, valorizo resolução de problemas, adaptabilidade, criatividade, trabalho em equipe e aprendizado contínuo.",
     "career": "Desenvolvedor Fullstack",
     "phone_toast": "Número de Telefone copiado para a área de transferência",
-    "phone": "Número de Telefone"
+    "phone": "Número de Telefone",
+    "introduction": "Introdução",
+    "tools": "Ferramentas",
+    "projects_flex": "+50 Projetos Código Aberto",
+    "study_flex": "+8 Anos de Estudo",
+    "experience_flex": "+0 Anos de Experiência Profissional"
   },
   "header": {
     "about": "Sobre Mim",
     "home": "Início",
     "projects": "Projetos"
   },
+  "help": {
+    "help": "Menu de Ajuda",
+    "scroll": "Rolar página baixo/cima",
+    "nav": "Mover entre rotas esquerda/direita",
+    "options": "Abrir opções",
+    "help_menu": "Abrir Menu de Ajuda"
+  },
   "options": {
     "settings": "Configurações",
     "toggle_theme": "Mudar Tema",
     "toggle_language": "Mudar Linguagem",
     "github_login": "Login no Github",
-    "github_logout": "Logout do Github"
+    "github_logout": "Logout do Github",
+    "help": "Menu de Ajuda"
   },
   "project": {
     "more": "Mais",
@@ -36,6 +53,6 @@
     "star": "Star",
     "starred": "Starred",
     "repository": "Repositorio do Git",
-    "deploy": "Link"
+    "deploy": "Live"
   }
 }

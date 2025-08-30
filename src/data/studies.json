@@ -1,0 +1,26 @@
+[
+  {
+    "school": "Instituto Federal do Rio Grande do Sul - Campus Osório",
+    "interval": "2023 - 2025",
+    "degree": {
+      "en": "Technologist - Analysis and Development of Systems",
+      "pt": "Tecnólogo - Análise e Desenvolvimento de Sistemas"
+    },
+    "description": {
+      "en": "Focused on software development, data structures, and system design, building a solid foundation in core concepts and a wide range of technologies.",
+      "pt": "Focado em desenvolvimento de software, estruturas de dados e design de sistemas, construindo uma base sólida em conceitos essenciais e diversas tecnologias."
+    }
+  },
+  {
+    "school": "Instituto Federal do Rio Grande do Sul - Campus Osório",
+    "interval": "2018 - 2021",
+    "degree": {
+      "en": "Technician in Informatics",
+      "pt": "Técnico em Informática"
+    },
+    "description": {
+      "en": "Provided a practical foundation in programming, computer systems, and IT support, preparing for advanced studies in software development.",
+      "pt": "Ofereceu uma base prática em programação, sistemas de computador e suporte de TI, preparando para estudos avançados em desenvolvimento de software."
+    }
+  }
+]

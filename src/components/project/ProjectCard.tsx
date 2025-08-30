@@ -1,6 +1,6 @@
 'use client'
 
-import { Book, Github, Star } from "lucide-react";
+import { Book, ExternalLink, Github, Star } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
@@ -10,6 +10,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { useGithub } from "@/hooks/useGithub";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import ProjectImage from "./ProjectImage";
 
 type ProjectCardProps = {
   id: number
@@ -38,15 +39,7 @@ export function ProjectCard(props: ProjectCardProps) {
         props.invert ? "flex-row-reverse" : "flex-row"
       )}
     >
-      <Card className="relative w-[30%]">
-        <Image
-          src={props.imageUrl}
-          alt="project card"
-          fill
-          className="object-cover"
-          priority
-        />
-      </Card>
+      <ProjectImage imageUrl={props.imageUrl} />
       <Card className="w-[70%]">
         <CardHeader>
           <CardTitle className="text-2xl font-extrabold">
@@ -83,7 +76,7 @@ export function ProjectCard(props: ProjectCardProps) {
                 <TooltipTrigger asChild>
                   <Button variant="outline" size="icon" asChild>
                     <a href={props.projectLink} target="_blank">
-                      <Book />
+                      <ExternalLink />
                     </a>
                   </Button>
                 </TooltipTrigger>

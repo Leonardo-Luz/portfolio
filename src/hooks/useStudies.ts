@@ -1,4 +1,4 @@
-import studies from "@/studies.json"
+import studies from "@/data/studies.json"
 
 export function useStudies() {
 

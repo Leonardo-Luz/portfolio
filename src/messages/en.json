@@ -3,27 +3,44 @@
     "pt_br": "Portuguese Brazil",
     "en": "English",
     "project": "Project",
-    "projects": "Projects"
+    "projects": "Projects",
+    "clipboard_toast": "Copied to clipboard",
+    "education": "Education",
+    "experience": "Experience",
+    "technologies": "Technologies",
+    "skills": "Skills"
   },
   "about_me": {
-    "education": "Education",
-    "introduction": "Introduction",
-    "introduction_desc": "lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum lorem ipsum dolor sit amet ipsum",
+    "greeter": "Hi, im",
+    "introduction_desc": "I am a Technology student at Instituto Federal do Rio Grande do Sul – Campus Osório (2023–2025), pursuing a degree in Systems Analysis and Development. My experience spans both frontend and backend development, working with technologies such as TypeScript, React, Next.js, Tailwind, Spring, and Golang, as well as Rust, Lua and Python in miscellaneous projects. In my daily workflow, I rely on tools like Git, Docker, Neovim, and Linux to streamline development and maintain productivity. With solid foundations in software engineering, RESTful APIs, design patterns, databases, and containerization, I focus on building clean and well-structured solutions. Alongside technical expertise, I value problem-solving, adaptability, creativity, teamwork, and continuous self-learning.",
     "career": "Fullstack Developer",
     "phone_toast": "Phone Number copied to clipboard",
-    "phone": "Phone Number"
+    "phone": "Phone Number",
+    "introduction": "Introduction",
+    "tools": "Tools",
+    "projects_flex": "+50 Projects Open-Source",
+    "study_flex": "+8 Years of Study",
+    "experience_flex": "+0 Years of profissional Experience"
   },
   "header": {
     "about": "About Me",
     "home": "Home",
     "projects": "Projects"
   },
+  "help": {
+    "help": "Help Menu",
+    "scroll": "Scroll page down/up",
+    "nav": "Move between nav links left/right",
+    "options": "Open Options",
+    "help_menu": "Open Help Menu"
+  },
   "options": {
     "settings": "Settings",
     "toggle_theme": "Change Theme",
     "toggle_language": "Change Language",
     "github_login": "Log in to GitHub",
-    "github_logout": "Log out of GitHub"
+    "github_logout": "Log out of GitHub",
+    "help": "Help Menu"
   },
   "project": {
     "more": "More",
@@ -36,7 +53,7 @@
     "star": "Star",
     "starred": "Starred",
     "repository": "Git Repository",
-    "deploy": "Link"
+    "deploy": "Live"
   },
   "toast": {
     "phone_to_clipboard": "",

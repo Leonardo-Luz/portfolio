@@ -1,0 +1,115 @@
+{
+  "name": "Leonardo Luz",
+  "birthday": {
+    "year": 2002,
+    "month": 11,
+    "date": 7
+  },
+  "github": "leonardo-luz",
+  "linkedin": "leonardo-luz-fachel",
+  "email": "leonardo.luz.fc@gmail.com",
+  "twitch": "dev_luz",
+  "discord": "leonardo_lf",
+  "phone": "55 51 99999-9999",
+  "tools": [
+    "Git",
+    "Docker",
+    "Neovim",
+    "Arch Linux"
+  ],
+  "key_technologies": {
+    "Frontend": [
+      "Typescript",
+      "React",
+      "Next",
+      "Shadcn/ui",
+      "Tailwind",
+      "Java",
+      "Spring Web",
+      "JavaFX",
+      "Bootstrap"
+    ],
+    "Backend": [
+      "Typescript",
+      "Fastify",
+      "Express",
+      "Sequelize",
+      "Drizzle",
+      "Prisma",
+      "Java",
+      "Spring Data",
+      "JPA",
+      "Hibernate",
+      "Spring Security",
+      "Golang",
+      "Gin",
+      "Gorm",
+      "Gorilla WebSocket"
+    ],
+    "Misc": [
+      "Rust",
+      "Lua",
+      "Python",
+      "PlantUML",
+      "LaTeX"
+    ]
+  },
+  "skills": {
+    "en": {
+      "hard skills": [
+        "Version Control",
+        "RESTful API",
+        "MVC",
+        "Data Structures",
+        "Software Engineering",
+        "Database Design",
+        "Design Patterns",
+        "Unit Testing",
+        "Linux",
+        "Vim Motions",
+        "CLI Development",
+        "Agile Methodologies",
+        "Containerization"
+      ],
+      "soft skills": [
+        "Problem-Solving",
+        "Adaptability",
+        "Teamwork",
+        "Communication",
+        "Creativity",
+        "Self-Learning",
+        "Critical Thinking",
+        "Time Management",
+        "Attention to Detail"
+      ]
+    },
+    "pt": {
+      "hard skills": [
+        "Controle de Versão",
+        "APIs RESTful",
+        "MVC",
+        "Estruturas de Dados",
+        "Engenharia de Software",
+        "Modelagem de Banco de Dados",
+        "Padrões de Projeto",
+        "Testes Unitários",
+        "Linux",
+        "Vim Motions",
+        "Desenvolvimento de CLI",
+        "Metodologias Ágeis",
+        "Containerização"
+      ],
+      "soft skills": [
+        "Resolução de Problemas",
+        "Adaptabilidade",
+        "Trabalho em Equipe",
+        "Comunicação",
+        "Criatividade",
+        "Aprendizado Autônomo",
+        "Pensamento Crítico",
+        "Gestão de Tempo",
+        "Atenção aos Detalhes"
+      ]
+    }
+  }
+}

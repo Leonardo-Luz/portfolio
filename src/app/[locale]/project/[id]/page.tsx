@@ -15,11 +15,12 @@ export default function Project({ params }: ProjectProps) {
   const project = getProjectByID(id)
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full mt-20">
+    <div className="flex flex-col items-center justify-center h-full w-full">
       <ProjectCard
         id={id}
         tag={project.tag}
         title={project.title}
+        repo={project.repo}
         description={project.description}
         imageUrl={project.imageUrl}
         tecnologies={project.tecnologies}

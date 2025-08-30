@@ -18,7 +18,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Leonardo Luz",
+  title: "Leonardo Luz Portfolio",
   description: "My Portfolio",
 };
 
@@ -29,7 +29,7 @@ export default async function LocaleLayout({
   params
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: "pt" | "en" }>
 }) {
   const messages = messagesMap[(await params).locale];
   if (!messages) notFound();
