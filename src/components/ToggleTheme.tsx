@@ -19,6 +19,9 @@ export function ToggleTheme() {
         setTheme("light")
         break;
       case "light":
+        setTheme("system")
+        break
+      case "system":
         setTheme("dark")
         break
       default:
