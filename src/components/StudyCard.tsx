@@ -22,7 +22,7 @@ export function StudyCard(props: StudyCardProps) {
     <Card className="w-[60%]">
       <CardHeader>
         <CardTitle className="text-2xl font-extrabold">{props.degree[locale]}</CardTitle>
-        <CardDescription className="flex flex-row gap-2">
+        <CardDescription className="flex flex-wrap gap-2">
           <Badge className="text-sm" variant="default">{props.school}</Badge>
           <Badge className="text-sm" variant="secondary">{props.interval}</Badge>
         </CardDescription>

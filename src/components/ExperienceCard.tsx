@@ -26,7 +26,7 @@ export function ExperienceCard(props: ExperienceCardProps) {
     <Card className="w-[60%]">
       <CardHeader>
         <CardTitle className="text-2xl font-extrabold">{props.enterprise}</CardTitle>
-        <CardDescription className="flex flex-row gap-2">
+        <CardDescription className="flex flex-wrap gap-2">
           <Badge className="text-sm" variant="default">{props.role[locale]}</Badge>
           <Badge className="text-sm" variant="default">{props.style[locale]}</Badge>
           <Badge className="text-sm" variant="secondary">{props.interval}</Badge>
