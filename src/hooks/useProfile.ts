@@ -11,7 +11,7 @@ export function useProfile() {
     const ageInMs = Date.now() - birthday.getTime();
     const ageInYears = ageInMs / (1000 * 60 * 60 * 24 * 365.25);
     setAge(parseInt(ageInYears.toString(), 10));
-  }, [data]);
+  }, []);
 
   return {
     ...data,

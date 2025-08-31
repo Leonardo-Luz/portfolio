@@ -1,10 +1,9 @@
 'use client'
 
-import { Book, ExternalLink, Github, Star } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";

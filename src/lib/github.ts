@@ -6,7 +6,6 @@ export interface GithubRepo {
   stargazers_count: number
   html_url: string
   starred?: boolean
-  [key: string]: any
 }
 
 export async function getRepo(repo: string, token?: string): Promise<GithubRepo> {

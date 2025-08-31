@@ -5,14 +5,14 @@ import { redirect } from "next/navigation";
 async function getPreferredLocale() {
   const cookieStore = await cookies();
   const cookieLocale = cookieStore.get("NEXT_LOCALE")?.value;
-  if (cookieLocale && routing.locales.includes(cookieLocale as any)) {
+  if (cookieLocale && routing.locales.includes(cookieLocale as "pt" | "en")) {
     return cookieLocale;
   }
 
   const acceptLanguage = (await headers()).get("accept-language");
   if (acceptLanguage) {
     const preferred = acceptLanguage.split(",")[0].split("-")[0];
-    if (routing.locales.includes(preferred as any)) {
+    if (routing.locales.includes(preferred as "pt" | "en")) {
       return preferred;
     }
   }

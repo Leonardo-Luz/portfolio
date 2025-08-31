@@ -47,7 +47,7 @@ export function Options() {
     }
     window.addEventListener("keydown", handler)
     return () => window.removeEventListener("keydown", handler)
-  }, [])
+  }, [open])
 
   return (
     <Tooltip>

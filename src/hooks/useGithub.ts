@@ -20,9 +20,10 @@ export function useGithub(repo?: string) {
         const starred = await checkStar(repo, token)
 
         return { ...repoData, starred }
-      } catch (err: any) {
-        toast.error(err.message, { description: err.description })
-        throw err
+      } catch (err) {
+        const error = err as { message: string, description: string }
+        toast.error(error.message, { description: error.description })
+        throw error
       }
     },
     staleTime: 1000 * 60 * 10,
@@ -36,9 +37,10 @@ export function useGithub(repo?: string) {
         if (!token) throw { message: "No token", description: "Log in with GitHub first" }
         await starRepo(repo, token)
         toast.success("Repository succefully starred")
-      } catch (err: any) {
-        toast.error(err.message, { description: err.description })
-        throw err
+      } catch (err) {
+        const error = err as { message: string, description: string }
+        toast.error(error.message, { description: error.description })
+        throw error
       }
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ["repo", repo] }),
@@ -52,9 +54,10 @@ export function useGithub(repo?: string) {
         if (!token) throw { message: "No token", description: "Log in with GitHub first" }
         await unstarRepo(repo, token)
         toast.success("Repository succefully unstarred")
-      } catch (err: any) {
-        toast.error(err.message, { description: err.description })
-        throw err
+      } catch (err) {
+        const error = err as { message: string, description: string }
+        toast.error(error.message, { description: error.description })
+        throw error
       }
     },
     onSuccess: () => {

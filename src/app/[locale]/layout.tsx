@@ -22,15 +22,9 @@ export const metadata: Metadata = {
   description: "My Portfolio",
 };
 
-const messagesMap: Record<string, any> = { en, pt };
+const messagesMap: Record<string, unknown> = { en, pt };
 
-export default async function LocaleLayout({
-  children,
-  params
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: "pt" | "en" }>
-}) {
+export default async function LocaleLayout({ children, params }: LayoutProps<"/[locale]">) {
   const messages = messagesMap[(await params).locale];
   if (!messages) notFound();
 

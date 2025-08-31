@@ -63,5 +63,9 @@
     "fetch_fail": "Failed to fetch repo",
     "unstar_fail": "",
     "star_fail": ""
+  },
+  "not_found": {
+    "title": "Page not Found",
+    "message": "Back to Home Page"
   }
 }

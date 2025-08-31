@@ -54,5 +54,18 @@
     "starred": "Starred",
     "repository": "Repositorio do Git",
     "deploy": "Live"
+  },
+  "toast": {
+    "phone_to_clipboard": "",
+    "rate_limit_mess": "Limite de requisições excedido",
+    "rate_limit_desc_1": "Tente novamente em",
+    "rate_limit_desc_2": "Tente novamente mais tarde",
+    "fetch_fail": "Falha ao buscar o repositório",
+    "unstar_fail": "",
+    "star_fail": ""
+  },
+  "not_found": {
+    "title": "Página não encontrada",
+    "message": "Voltar para a página inicial"
   }
 }
