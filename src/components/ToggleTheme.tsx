@@ -22,7 +22,7 @@ export function ToggleTheme() {
         setTheme("dark")
         break
       default:
-        setTheme("system")
+        setTheme("light")
     }
   }
 
@@ -37,7 +37,7 @@ export function ToggleTheme() {
       {
         theme == "dark" ? <Moon /> :
           theme == "light" ? <Sun /> :
-            <SunMoon className="sr-only" />
+            <SunMoon />
       }
     </DropdownMenuItem>
   )
