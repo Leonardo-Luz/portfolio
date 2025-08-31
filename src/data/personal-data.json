@@ -5,6 +5,10 @@
     "month": 11,
     "date": 7
   },
+  "location": {
+    "en": "Rio Grande do Sul, Brazil",
+    "pt": "Rio Grande do Sul, Brasil"
+  },
   "github": "leonardo-luz",
   "linkedin": "leonardo-luz-fachel",
   "email": "leonardo.luz.fc@gmail.com",

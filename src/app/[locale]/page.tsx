@@ -1,25 +1,22 @@
 'use client'
 
-import { Separator } from "@/components/ui/separator";
-import AboutMe from "./about-me/page";
-import EducationExperience from "./education-experience/page";
-import Projects from "./projects/page";
-
-// FIX: REMAKE HOME PAGE
+import Projects from "@/components/home/Projects";
+import AboutMeFloatingCard from "@/components/home/AboutMeFloatingCard";
+import Education from "@/components/home/Education";
 
 export default function Home() {
 
   return (
-    <div>
-      <AboutMe />
+    <div className="w-full flex flex-row px-24">
+      <AboutMeFloatingCard />
 
-      <Separator className="my-30" />
+      <div className="w-full flex flex-col items-end">
+        <div className="min-w-[45%] flex flex-col gap-12 items-end">
+          <Projects />
 
-      <EducationExperience />
-
-      <Separator className="my-30" />
-
-      <Projects />
+          <Education />
+        </div>
+      </div>
     </div>
   );
 }

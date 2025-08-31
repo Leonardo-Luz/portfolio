@@ -8,10 +8,12 @@
     "education": "Education",
     "experience": "Experience",
     "technologies": "Technologies",
-    "skills": "Skills"
+    "skills": "Skills",
+    "more": "More"
   },
   "about_me": {
     "greeter": "Hi, im",
+    "one_line_intro": "Full-stack developer and Technology student at IFRS, passionate about building clean and efficient solutions.",
     "introduction_desc": "I am a Technology student at Instituto Federal do Rio Grande do Sul – Campus Osório (2023–2025), pursuing a degree in Systems Analysis and Development. My experience spans both frontend and backend development, working with technologies such as TypeScript, React, Next.js, Tailwind, Spring, and Golang, as well as Rust, Lua and Python in miscellaneous projects. In my daily workflow, I rely on tools like Git, Docker, Neovim, and Linux to streamline development and maintain productivity. With solid foundations in software engineering, RESTful APIs, design patterns, databases, and containerization, I focus on building clean and well-structured solutions. Alongside technical expertise, I value problem-solving, adaptability, creativity, teamwork, and continuous self-learning.",
     "career": "Fullstack Developer",
     "phone_toast": "Phone Number copied to clipboard",
@@ -20,7 +22,8 @@
     "tools": "Tools",
     "projects_flex": "+50 Projects Open-Source",
     "study_flex": "+8 Years of Study",
-    "experience_flex": "+0 Years of profissional Experience"
+    "experience_flex": "+0 Years of profissional Experience",
+    "more": "More about me"
   },
   "header": {
     "about": "About Me",
@@ -43,7 +46,6 @@
     "help": "Help Menu"
   },
   "project": {
-    "more": "More",
     "all": "All",
     "fullstack": "Fullstack",
     "frontend": "Frontend",
