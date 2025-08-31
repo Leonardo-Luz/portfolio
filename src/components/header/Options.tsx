@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from "react"
-import { CircleQuestionMark, Flag, Moon, Settings, Sun } from "lucide-react";
+import { CircleQuestionMark, Flag, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
@@ -16,16 +16,15 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 import { usePathname, Link } from "@/i18n/navigation";
 import { LanguageMenuItem } from "./LanguageMenuItem";
 import { GithubAuthMenuItem } from "./GithubAuthMenuItem";
 import { useHelp } from "@/context/HelpProvider";
+import { ToggleTheme } from "../ToggleTheme";
 
 export function Options() {
   const { setOpen: setOpenHelp } = useHelp()
   const pathname = usePathname()
-  const { setTheme, theme } = useTheme()
   const t = useTranslations("options")
   const tg = useTranslations("global")
 
@@ -85,17 +84,7 @@ export function Options() {
               </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuSub>
-          <DropdownMenuItem
-            className="flex flex-row justify-between items-center gap-8"
-            onClick={() => setTheme(theme == "dark" ? "light" : theme == "light" ? "dark" : "system")}
-          >
-            <span>{t("toggle_theme")}</span>
-            {
-              theme == "dark" ? <Moon /> :
-                theme == "light" ? <Sun /> :
-                  <span className="sr-only">Toggle theme</span>
-            }
-          </DropdownMenuItem>
+          <ToggleTheme />
           <DropdownMenuItem
             className="flex flex-row justify-between items-center gap-8 w-full"
             onClick={() => setOpenHelp(prev => !prev)}

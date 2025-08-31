@@ -1,11 +1,17 @@
 'use client'
 
-import { Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Moon, Sun, SunMoon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { DropdownMenuItem } from "./ui/dropdown-menu";
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function ToggleTheme() {
+  const t = useTranslations("options")
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   function changeTheme() {
     switch (theme) {
@@ -20,15 +26,19 @@ export function ToggleTheme() {
     }
   }
 
+  if (!mounted) return null
+
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      onClick={() => changeTheme()}
+    <DropdownMenuItem
+      className="flex flex-row justify-between items-center gap-8"
+      onClick={changeTheme}
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
+      <span>{t("toggle_theme")}</span>
+      {
+        theme == "dark" ? <Moon /> :
+          theme == "light" ? <Sun /> :
+            <SunMoon className="sr-only" />
+      }
+    </DropdownMenuItem>
   )
 }
