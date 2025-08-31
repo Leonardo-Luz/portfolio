@@ -81,7 +81,7 @@ export default function AboutMe() {
         <CardContent className="flex flex-row justify-between">
           <span>{t("projects_flex")}</span>
           <span>{t("study_flex")}</span>
-          <span>{t("experience_flex")}</span>
+          {/* <span>{t("experience_flex")}</span> */}
         </CardContent>
 
         <CardFooter className="flex flex-row justify-between items-center">

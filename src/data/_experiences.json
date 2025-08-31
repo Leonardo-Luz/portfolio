@@ -1,0 +1,18 @@
+[
+  {
+    "enterprise": "enterprise name",
+    "interval": "2020 - 2025",
+    "role": {
+      "en": "Software Developer",
+      "pt": "Desenvolvedor de Software"
+    },
+    "style": {
+      "en": "Home Office/In Person",
+      "pt": "Remoto/Presencial"
+    },
+    "description": {
+      "en": "Job Description",
+      "pt": "Job Description"
+    }
+  }
+]

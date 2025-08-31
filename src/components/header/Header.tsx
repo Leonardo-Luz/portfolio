@@ -5,6 +5,8 @@ import { NavLink } from "./NavLink"
 import { Options } from "./Options"
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from "@/i18n/navigation"
+import { useExperiences } from "@/hooks/useExperiences"
+import { useStudies } from "@/hooks/useStudies"
 
 export function Header() {
   const t = useTranslations("header")
@@ -13,12 +15,24 @@ export function Header() {
   const router = useRouter()
   const pathname = usePathname()
 
+  const { allExperiences: experiences } = useExperiences()
+  const { allStudies: studies } = useStudies()
+
   const links = [
     { href: "/", label: t("home") },
     { href: "/about-me", label: t("about") },
-    { href: "/education-experience", label: `${tg("education")} / ${tg("experience")}` },
+    { href: "/experience", label: tg("experience") },
+    { href: "/education", label: tg("education") },
     { href: "/projects", label: t("projects") },
-  ]
+  ].filter(link => {
+    if (studies.length <= 0 && link.label === tg("education"))
+      return false
+
+    if (experiences.length <= 0 && link.label === tg("experience"))
+      return false
+
+    return true
+  })
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
