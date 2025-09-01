@@ -23,8 +23,8 @@ export function StudyCard(props: StudyCardProps) {
       <CardHeader>
         <CardTitle className="text-2xl font-extrabold">{props.degree[locale]}</CardTitle>
         <CardDescription className="flex flex-wrap gap-2">
-          <Badge className="text-sm" variant="default">{props.school}</Badge>
-          <Badge className="text-sm" variant="secondary">{props.interval}</Badge>
+          <Badge className="text-sm whitespace-normal" variant="default">{props.school}</Badge>
+          <Badge className="text-sm whitespace-normal" variant="secondary">{props.interval}</Badge>
         </CardDescription>
       </CardHeader>
     </Card>
