@@ -9,6 +9,7 @@ import { Link } from "@/i18n/navigation"
 import { ContactLink } from "../about-me/ContactLink"
 import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { Separator } from "../ui/separator"
+import Image from "next/image"
 
 export default function AboutMeFloatingCard() {
   const { age, location, github, linkedin, email, key_technologies } = useProfile()
@@ -20,17 +21,26 @@ export default function AboutMeFloatingCard() {
 
   return (
     <Card className="fixed w-[40%]">
-      <CardHeader>
-        <CardTitle className="text-xl">{t("greeter")} Leonardo Luz ({age})</CardTitle>
-        <CardDescription className="flex flex-col gap-2 mt-2">
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="secondary">{t("career")}</Badge>
-            <Badge variant="outline">
-              <MapPin />
-              <span>{location[locale]}</span>
-            </Badge>
-          </div>
-        </CardDescription>
+      <CardHeader className="flex flex-row justify-between items-center">
+        <div className="flex flex-col justify-between">
+          <CardTitle className="text-xl">{t("greeter")} Leonardo Luz - {age} {t("age")}</CardTitle>
+          <CardDescription className="flex flex-col gap-2 mt-2">
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="secondary">{t("career")}</Badge>
+              <Badge variant="outline">
+                <MapPin />
+                <span>{location[locale]}</span>
+              </Badge>
+            </div>
+          </CardDescription>
+        </div>
+        <Image
+          width={120}
+          height={120}
+          className="rounded-xl shadow-sm border"
+          src="https://avatars.githubusercontent.com/u/67484650"
+          alt="profile picture"
+        />
       </CardHeader>
 
       <Separator />

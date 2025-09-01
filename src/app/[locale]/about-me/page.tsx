@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { useProfile } from "@/hooks/useProfile";
 import { ContactLink } from "@/components/about-me/ContactLink";
+import Image from "next/image";
 
 export default function AboutMe() {
   const locale = useLocale() as "pt" | "en"
@@ -37,7 +38,16 @@ export default function AboutMe() {
         <Separator />
 
         <CardContent className="text-justify">
-          {t("introduction_desc")}
+          <Image
+            width={160}
+            height={160}
+            className="rounded-xl shadow-sm border mb-2 mr-4 float-left"
+            src="https://avatars.githubusercontent.com/u/67484650"
+            alt="profile picture"
+          />
+          <p>
+            {t("introduction_desc")}
+          </p>
         </CardContent>
 
         <Separator />
