@@ -33,6 +33,22 @@
   },
 
   {
+    "tag": "fullstack",
+    "title": {
+      "en": "Score Tracker",
+      "pt": "Registrador de Pontuação"
+    },
+    "description": {
+      "en": "A project developed during Distributed Objects classes, featuring user authentication, score management, and a web interface built with Spring and Java technologies.",
+      "pt": "Projeto desenvolvido durante as aulas de Objetos Distribuídos, com autenticação de usuários, gerenciamento de pontuações e interface web construída com Spring e tecnologias Java."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/java-distributed-objects-final-project",
+    "repo": "java-distributed-objects-final-project",
+    "imageUrl": "/globe.svg",
+    "tecnologies": ["Java", "Spring Security", "Spring Web", "H2", "JPA", "Bootstrap", "Thymeleaf", "Validation"]
+  },
+
+  {
     "tag": "misc",
     "title": {
       "en": "Passman CLI",
