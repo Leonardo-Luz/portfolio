@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { useProfile } from "@/hooks/useProfile";
 import { ContactLink } from "@/components/about-me/ContactLink";
 import Image from "next/image";
+import { TechnologyBadge } from "@/components/TechnologyBadge";
 
 export default function AboutMe() {
   const locale = useLocale() as "pt" | "en"
@@ -52,15 +53,15 @@ export default function AboutMe() {
 
         <Separator />
 
-        <CardContent className="flex flex-col gap-2 text-right">
+        <CardContent className="flex flex-col gap-6">
           <CardTitle className="text-xl">{tg("technologies")}</CardTitle>
           {
             Object.entries(key_technologies).map(([key, values]) => (
-              <div key={key} className="flex flex-wrap justify-end gap-2">
+              <div key={key} className="flex flex-wrap gap-2">
                 <Badge className="text-sm" key={key} variant="secondary">{key}</Badge>
                 {
                   values.map(value => (
-                    <Badge className="text-sm" key={value}>{value}</Badge>
+                    <TechnologyBadge size="sm" key={value} technology={value} />
                   ))
                 }
               </div>
@@ -70,7 +71,7 @@ export default function AboutMe() {
 
         <Separator />
 
-        <CardContent className="flex flex-col gap-2">
+        <CardContent className="flex flex-col gap-6">
           <CardTitle className="text-xl">{tg("skills")}</CardTitle>
           {
             Object.entries(skills[locale]).map(([key, values]) => (

@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useGithub } from "@/hooks/useGithub";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { TechnologyBadge } from "../TechnologyBadge";
 
 type ProjectCardProps = {
   id: number
@@ -45,12 +46,12 @@ export function ProjectCard(props: ProjectCardProps) {
               props.tecnologies.length >= 5 ? (
                 <>
                   {
-                    props.tecnologies.slice(0, 4).map(tecnology => <Badge key={tecnology} variant="default">{tecnology}</Badge>)
+                    props.tecnologies.slice(0, 4).map(tecnology => <TechnologyBadge key={tecnology} technology={tecnology} />)
                   }
                   <Badge variant="default">...</Badge>
                 </>
               ) : (
-                props.tecnologies.map(tecnology => <Badge key={tecnology} variant="default">{tecnology}</Badge>)
+                props.tecnologies.map(tecnology => <TechnologyBadge key={tecnology} technology={tecnology} />)
               )
             }
           </CardDescription>

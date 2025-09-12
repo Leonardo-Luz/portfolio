@@ -10,6 +10,7 @@ import { ContactLink } from "../about-me/ContactLink"
 import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { Separator } from "../ui/separator"
 import Image from "next/image"
+import { TechnologyBadge } from "../TechnologyBadge"
 
 export default function AboutMeFloatingCard() {
   const { age, location, github, linkedin, email, key_technologies } = useProfile()
@@ -57,10 +58,10 @@ export default function AboutMeFloatingCard() {
               <Badge className="text-sm" key={key} variant="secondary">{key}</Badge>
               {
                 values.slice(0, 3).map(value => (
-                  <Badge className="text-sm" key={value}>{value}</Badge>
+                  <TechnologyBadge key={value} technology={value} />
                 ))
               }
-              <Badge className="text-sm">...</Badge>
+              <Badge className="text-sm">+{values.length - 3}</Badge>
             </div>
           ))
         }

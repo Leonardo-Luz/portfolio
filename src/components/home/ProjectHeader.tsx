@@ -2,8 +2,8 @@
 
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useProjects } from "@/hooks/useProjects";
-import { Badge } from "../ui/badge";
 import { useTranslations } from "next-intl";
+import { TechnologyBadge } from "../TechnologyBadge";
 
 type ProjectHeaderProps = {
   tag: string,
@@ -24,7 +24,7 @@ export function ProjectHeader({ tag }: ProjectHeaderProps) {
         <CardDescription className="flex flex-wrap gap-2">
           {
             tags.map((item, index) => (
-              <Badge key={index}>{item}</Badge>
+              <TechnologyBadge key={index} technology={item} />
             ))
           }
         </CardDescription>

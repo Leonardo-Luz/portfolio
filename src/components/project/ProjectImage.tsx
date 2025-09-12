@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
 
 export default function ExpandableCard(props: { imageUrl: string }) {
@@ -20,8 +20,10 @@ export default function ExpandableCard(props: { imageUrl: string }) {
         </Card>
       </DialogTrigger>
 
-      <DialogContent className="p-0 w-[80vw] h-[80vh] flex items-center justify-center">
-        <DialogTitle>Project Image</DialogTitle>
+      <DialogContent className="flex flex-col min-w-[80vw] min-h-[80vh]">
+        <DialogHeader>
+          <DialogTitle></DialogTitle>
+        </DialogHeader>
         <div className="w-full h-full">
           <Image
             src={props.imageUrl}

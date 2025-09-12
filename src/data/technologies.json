@@ -1,0 +1,275 @@
+{
+  "Typescript": {
+    "desc": {
+      "en": "A typed superset of JavaScript that compiles to plain JavaScript.",
+      "pt": "Um superconjunto tipado de JavaScript que compila para JavaScript puro."
+    },
+    "docs": "https://www.typescriptlang.org/docs/"
+  },
+  "React": {
+    "desc": {
+      "en": "A JavaScript library for building user interfaces.",
+      "pt": "Uma biblioteca JavaScript para construir interfaces de usuário."
+    },
+    "docs": "https://react.dev/learn"
+  },
+  "Next": {
+    "desc": {
+      "en": "The React Framework for the Web",
+      "pt": "O Framework React para a Web"
+    },
+    "docs": "https://nextjs.org/docs"
+  },
+  "Shadcn/ui": {
+    "desc": {
+      "en": "Beautifully designed components that you can copy and paste into your apps.",
+      "pt": "Componentes lindamente projetados que você pode copiar e colar em seus aplicativos."
+    },
+    "docs": "https://ui.shadcn.com/"
+  },
+  "Tailwind": {
+    "desc": {
+      "en": "A utility-first CSS framework for rapidly building custom designs.",
+      "pt": "Um framework CSS utility-first para construir designs personalizados rapidamente."
+    },
+    "docs": "https://tailwindcss.com/docs"
+  },
+  "Java": {
+    "desc": {
+      "en": "A high-level, class-based, object-oriented programming language.",
+      "pt": "Uma linguagem de programação orientada a objetos, baseada em classes e de alto nível."
+    },
+    "docs": "https://docs.oracle.com/en/java/"
+  },
+  "Spring Web": {
+    "desc": {
+      "en": "A module of the Spring Framework that provides comprehensive support for web application development.",
+      "pt": "Um módulo do Spring Framework que fornece suporte abrangente para o desenvolvimento de aplicações web."
+    },
+    "docs": "https://docs.spring.io/spring-framework/reference/web.html"
+  },
+  "JavaFX": {
+    "desc": {
+      "en": "A software platform for creating and delivering rich internet applications (RIAs) that can run across a wide variety of devices.",
+      "pt": "Uma plataforma de software para criar e fornecer aplicações ricas de internet (RIAs) que podem ser executadas em uma ampla variedade de dispositivos."
+    },
+    "docs": "https://openjfx.io/"
+  },
+  "Bootstrap": {
+    "desc": {
+      "en": "A popular CSS framework for developing responsive, mobile-first websites.",
+      "pt": "Um framework CSS popular para desenvolver sites responsivos e mobile-first."
+    },
+    "docs": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+  },
+  "Fastify": {
+    "desc": {
+      "en": "Fast and low overhead web framework, for Node.js",
+      "pt": "Framework web rápido e de baixa sobrecarga para Node.js"
+    },
+    "docs": "https://www.fastify.io/docs/latest/Reference/Overview"
+  },
+  "Express": {
+    "desc": {
+      "en": "Fast, unopinionated, minimalist web framework for Node.js",
+      "pt": "Framework web rápido, minimalista e não opinativo para Node.js"
+    },
+    "docs": "https://expressjs.com/en/starter/installing.html"
+  },
+  "Sequelize": {
+    "desc": {
+      "en": "Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.",
+      "pt": "Sequelize é um ORM Node.js baseado em promessas para Postgres, MySQL, MariaDB, SQLite e Microsoft SQL Server."
+    },
+    "docs": "https://sequelize.org/docs/v6/"
+  },
+  "Drizzle": {
+    "desc": {
+      "en": "Typescript ORM that feels like writing SQL.",
+      "pt": "ORM Typescript que parece escrever SQL."
+    },
+    "docs": "https://orm.drizzle.team/docs/quick-start"
+  },
+  "Prisma": {
+    "desc": {
+      "en": "Next-generation Node.js and TypeScript ORM.",
+      "pt": "ORM Node.js e TypeScript de última geração."
+    },
+    "docs": "https://www.prisma.io/docs/"
+  },
+  "Spring Data": {
+    "desc": {
+      "en": "Provides a consistent approach to data access – relational, non-relational, map-reduce, and cloud-based – while retaining the specific capabilities of the underlying data store.",
+      "pt": "Fornece uma abordagem consistente para o acesso a dados – relacional, não relacional, map-reduce e baseado em nuvem – mantendo as capacidades específicas do armazenamento de dados subjacente."
+    },
+    "docs": "https://spring.io/projects/spring-data"
+  },
+  "JPA": {
+    "desc": {
+      "en": "Java Persistence API - Java standard for mapping Java objects to a relational database.",
+      "pt": "API de Persistência Java - Padrão Java para mapear objetos Java para um banco de dados relacional."
+    },
+    "docs": "https://jakarta.ee/specifications/persistence/3.0/"
+  },
+  "Hibernate": {
+    "desc": {
+      "en": "An object-relational mapping tool for Java.",
+      "pt": "Uma ferramenta de mapeamento objeto-relacional para Java."
+    },
+    "docs": "https://hibernate.org/orm/documentation/5.6/"
+  },
+  "Spring Security": {
+    "desc": {
+      "en": "A powerful and highly customizable authentication and access-control framework for Java applications.",
+      "pt": "Um framework de autenticação e controle de acesso poderoso e altamente personalizável para aplicações Java."
+    },
+    "docs": "https://spring.io/projects/spring-security"
+  },
+  "Golang": {
+    "desc": {
+      "en": "An open source programming language that makes it easy to build simple, reliable, and efficient software.",
+      "pt": "Uma linguagem de programação de código aberto que facilita a criação de software simples, confiável e eficiente."
+    },
+    "docs": "https://go.dev/doc/"
+  },
+  "Gin": {
+    "desc": {
+      "en": "Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster.",
+      "pt": "Gin é um framework web HTTP escrito em Go (Golang). Ele apresenta uma API semelhante ao Martini com um desempenho muito melhor - até 40 vezes mais rápido."
+    },
+    "docs": "https://gin-gonic.com/docs/"
+  },
+  "Gorm": {
+    "desc": {
+      "en": "The fantastic ORM library for Golang, aims to be developer friendly.",
+      "pt": "A fantástica biblioteca ORM para Golang, com o objetivo de ser amigável ao desenvolvedor."
+    },
+    "docs": "https://gorm.io/docs/"
+  },
+  "Gorilla WebSocket": {
+    "desc": {
+      "en": "A Go implementation of the WebSocket protocol.",
+      "pt": "Uma implementação Go do protocolo WebSocket."
+    },
+    "docs": "https://github.com/gorilla/websocket"
+  },
+  "Postgres": {
+    "desc": {
+      "en": "A powerful, open source object-relational database system.",
+      "pt": "Um sistema de banco de dados objeto-relacional poderoso e de código aberto."
+    },
+    "docs": "https://www.postgresql.org/docs/"
+  },
+  "MySQL": {
+    "desc": {
+      "en": "The world's most popular open source database.",
+      "pt": "O banco de dados de código aberto mais popular do mundo."
+    },
+    "docs": "https://dev.mysql.com/doc/"
+  },
+  "H2": {
+    "desc": {
+      "en": "H2 is an open-source, fast, JDBC-compliant, full-featured Java database.",
+      "pt": "H2 é um banco de dados Java de código aberto, rápido, compatível com JDBC e completo."
+    },
+    "docs": "https://www.h2database.com/html/index.html"
+  },
+  "Sqlite": {
+    "desc": {
+      "en": "SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.",
+      "pt": "SQLite é uma biblioteca da linguagem C que implementa um mecanismo de banco de dados SQL pequeno, rápido, autocontido, de alta confiabilidade e completo."
+    },
+    "docs": "https://www.sqlite.org/docs.html"
+  },
+  "MongoDB": {
+    "desc": {
+      "en": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database product.",
+      "pt": "MongoDB é um programa de banco de dados orientado a documentos de plataforma cruzada e disponível para consulta. Classificado como um produto de banco de dados NoSQL."
+    },
+    "docs": "https://www.mongodb.com/docs/"
+  },
+  "Rust": {
+    "desc": {
+      "en": "A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
+      "pt": "Uma linguagem de programação de sistemas que é extremamente rápida, evita falhas de segmentação e garante segurança de thread."
+    },
+    "docs": "https://doc.rust-lang.org/stable/book/"
+  },
+  "Lua": {
+    "desc": {
+      "en": "A powerful, fast, lightweight, embeddable scripting language.",
+      "pt": "Uma linguagem de script poderosa, rápida, leve e incorporável."
+    },
+    "docs": "https://www.lua.org/docs.html"
+  },
+  "Python": {
+    "desc": {
+      "en": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
+      "pt": "Python é uma linguagem de programação que permite trabalhar rapidamente e integrar sistemas de forma mais eficaz."
+    },
+    "docs": "https://docs.python.org/3/"
+  },
+  "PlantUML": {
+    "desc": {
+      "en": "PlantUML is a component that allows to write diagrams using a simple textual description language.",
+      "pt": "PlantUML é um componente que permite escrever diagramas usando uma linguagem de descrição textual simples."
+    },
+    "docs": "https://plantuml.com/"
+  },
+  "LaTeX": {
+    "desc": {
+      "en": "A document preparation system for high-quality typesetting.",
+      "pt": "Um sistema de preparação de documentos para composição tipográfica de alta qualidade."
+    },
+    "docs": "https://www.latex-project.org/help/documentation/"
+  },
+  "golang.org/x/net": {
+    "desc": {
+      "en": "Supplementary Go network libraries.",
+      "pt": "Bibliotecas de rede Go suplementares."
+    },
+    "docs": "https://pkg.go.dev/golang.org/x/net"
+  },
+  "Thymeleaf": {
+    "desc": {
+      "en": "Thymeleaf is a modern server-side Java template engine for both web and standalone environments.",
+      "pt": "Thymeleaf é um mecanismo de modelo Java moderno do lado do servidor para ambientes web e independentes."
+    },
+    "docs": "https://www.thymeleaf.org/documentation.html"
+  },
+  "Validation": {
+    "desc": {
+      "en": "Bean Validation provides a common approach to validating JavaBeans in Java.",
+      "pt": "Bean Validation fornece uma abordagem comum para validar JavaBeans em Java."
+    },
+    "docs": "https://jakarta.ee/specifications/bean-validation/3.0/"
+  },
+  "AES-GCM": {
+    "desc": {
+      "en": "Advanced Encryption Standard - Galois/Counter Mode",
+      "pt": "Padrão de criptografia avançada - Modo Galois/Contador"
+    },
+    "docs": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf"
+  },
+  "PBKDF2": {
+    "desc": {
+      "en": "Password-Based Key Derivation Function 2",
+      "pt": "Função de derivação de chave baseada em senha 2"
+    },
+    "docs": "https://datatracker.ietf.org/doc/html/rfc8018"
+  },
+  "SHA-2": {
+    "desc": {
+      "en": "A family of cryptographic hash functions.",
+      "pt": "Uma família de funções de hash criptográficas."
+    },
+    "docs": "https://nvlpubs.nist.gov/nistpubs/fips/NIST.FIPS.180-4.pdf"
+  },
+   "Neovim": {
+    "desc": {
+      "en": "Neovim is a refactor, and continuation of Vim.",
+      "pt": "Neovim é uma refatoração e continuação do Vim."
+    },
+    "docs": "https://neovim.io/doc/"
+  }
+}

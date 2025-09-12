@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { useGithub } from "@/hooks/useGithub";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import ProjectImage from "./ProjectImage";
+import { TechnologyBadge } from "../TechnologyBadge";
 
 type ProjectCardProps = {
   id: number
@@ -50,7 +51,7 @@ export function ProjectCard(props: ProjectCardProps) {
           <CardDescription className="flex flex-wrap gap-2">
             <Badge variant="secondary">{props.tag}</Badge>
             {
-              props.tecnologies.map(tecnology => <Badge key={tecnology} variant="default">{tecnology}</Badge>)
+              props.tecnologies.map(tecnology => <TechnologyBadge key={tecnology} technology={tecnology} />)
             }
           </CardDescription>
         </CardHeader>

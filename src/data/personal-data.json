@@ -48,7 +48,12 @@
       "Golang",
       "Gin",
       "Gorm",
-      "Gorilla WebSocket"
+      "Gorilla WebSocket",
+      "Postgres",
+      "MySQL",
+      "H2",
+      "Sqlite",
+      "MongoDB"
     ],
     "Misc": [
       "Rust",
@@ -62,6 +67,8 @@
     "en": {
       "hard skills": [
         "Version Control",
+        "SQL",
+        "ORM/ODM",
         "RESTful API",
         "MVC",
         "Data Structures",
@@ -90,6 +97,8 @@
     "pt": {
       "hard skills": [
         "Controle de Versão",
+        "SQL",
+        "ORM/ODM",
         "APIs RESTful",
         "MVC",
         "Estruturas de Dados",
