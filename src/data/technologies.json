@@ -249,21 +249,21 @@
       "en": "Advanced Encryption Standard - Galois/Counter Mode",
       "pt": "Padrão de criptografia avançada - Modo Galois/Contador"
     },
-    "docs": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf"
+    "docs": "https://docs.rs/aes-gcm/latest/aes_gcm/"
   },
   "PBKDF2": {
     "desc": {
       "en": "Password-Based Key Derivation Function 2",
       "pt": "Função de derivação de chave baseada em senha 2"
     },
-    "docs": "https://datatracker.ietf.org/doc/html/rfc8018"
+    "docs": "https://docs.rs/pbkdf2/latest/pbkdf2/"
   },
   "SHA-2": {
     "desc": {
       "en": "A family of cryptographic hash functions.",
       "pt": "Uma família de funções de hash criptográficas."
     },
-    "docs": "https://nvlpubs.nist.gov/nistpubs/fips/NIST.FIPS.180-4.pdf"
+    "docs": "https://docs.rs/sha2/latest/sha2/"
   },
    "Neovim": {
     "desc": {
