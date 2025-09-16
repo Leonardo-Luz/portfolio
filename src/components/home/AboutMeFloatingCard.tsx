@@ -11,6 +11,7 @@ import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { Separator } from "../ui/separator"
 import Image from "next/image"
 import { TechnologyBadge } from "../TechnologyBadge"
+import { CVDownloadButton } from "../CVDownloadButton"
 
 export default function AboutMeFloatingCard() {
   const { age, location, github, linkedin, email, key_technologies } = useProfile()
@@ -84,6 +85,7 @@ export default function AboutMeFloatingCard() {
           <ContactLink href={`mailto:${email}`} tooltip="Email">
             <Mail />
           </ContactLink>
+          <CVDownloadButton />
         </div>
       </CardFooter>
     </Card>

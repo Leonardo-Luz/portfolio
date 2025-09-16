@@ -9,6 +9,7 @@ import { useProfile } from "@/hooks/useProfile";
 import { ContactLink } from "@/components/about-me/ContactLink";
 import Image from "next/image";
 import { TechnologyBadge } from "@/components/TechnologyBadge";
+import { CVDownloadButton } from "@/components/CVDownloadButton";
 
 export default function AboutMe() {
   const locale = useLocale() as "pt" | "en"
@@ -107,6 +108,8 @@ export default function AboutMe() {
               <Mail />
             </ContactLink>
           </div>
+
+          <CVDownloadButton />
 
           <div className="flex flex-row gap-4">
             <ContactLink copy={phone} toastMess={tg("clipboard_toast")} tooltip={t("phone")}>
