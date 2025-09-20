@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLocale } from "next-intl";

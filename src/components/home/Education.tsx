@@ -1,3 +1,5 @@
+'use client'
+
 import { StudyCard } from "@/components/home/StudyCard"
 import { useStudies } from "@/hooks/useStudies"
 import { useTranslations } from "next-intl"

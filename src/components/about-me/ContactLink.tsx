@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode } from "react";
 import { toast } from "sonner";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
