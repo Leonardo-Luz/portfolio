@@ -5,11 +5,11 @@ import { Card } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
 
-export default function ExpandableCard(props: { imageUrl: string }) {
+export default function ExpandableCard(props: { imageUrl: string, force?: boolean }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className="relative w-[30%] overflow-hidden cursor-pointer">
+        <Card className={cn("relative w-full h-[80vh] md:w-[30%] md:h-auto overflow-hidden cursor-pointer", props.force ? "block" : "hidden md:block")}>
           <Image
             src={props.imageUrl}
             alt="project card"

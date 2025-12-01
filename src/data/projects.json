@@ -47,6 +47,21 @@
     "imageUrl": "/globe.svg",
     "tecnologies": ["Java", "Spring Security", "Spring Web", "H2", "JPA", "Bootstrap", "Thymeleaf", "Validation"]
   },
+  {
+    "tag": "fullstack",
+    "title": {
+      "en": "Passman App",
+      "pt": "Passman App"
+    },
+    "description": {
+      "en": "A Flutter client for securely storing and managing passwords. Uses PBKDF2 with SHA-2 to derive encryption keys from a master password, and AES-GCM for authenticated encryption of stored passwords with encrypted backups.",
+      "pt": "Um client desenvolvido em Flutter para armazenar e gerenciar senhas de forma segura. Utiliza PBKDF2 com SHA-2 para derivar chaves a partir da senha mestre e AES-GCM para criptografia autenticada das senhas armazenadas, incluindo backups criptografados."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/flutter_passman_client",
+    "repo": "flutter_passman_client",
+    "imageUrl": "/globe.svg",
+    "tecnologies": ["Dart", "Flutter", "Sqlite", "AES-GCM", "PBKDF2", "SHA-2"]
+  },
 
   {
     "tag": "misc",

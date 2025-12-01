@@ -22,7 +22,8 @@ type ProjectCardProps = {
   gitLink?: string,
   repo?: string
   projectLink?: string,
-  invert?: boolean
+  invert?: boolean,
+  forceImage?: boolean
 }
 
 export function ProjectCard(props: ProjectCardProps) {
@@ -36,12 +37,12 @@ export function ProjectCard(props: ProjectCardProps) {
   return (
     <div
       className={cn(
-        "flex gap-8 items-stretch w-[60%] max-w-5xl",
-        props.invert ? "flex-row-reverse" : "flex-row"
+        "flex gap-8 items-stretch justify-center max-w-5xl w-[80%] md:w-[60%]",
+        props.invert ? "flex-col-reverse md:flex-row-reverse" : "flex-col-reverse md:flex-row"
       )}
     >
-      <ProjectImage imageUrl={props.imageUrl} />
-      <Card className="w-[70%]">
+      <ProjectImage imageUrl={props.imageUrl} force={props.forceImage} />
+      <Card className="w-full md:w-[70%]">
         <CardHeader>
           <CardTitle className="text-2xl font-extrabold">
             {

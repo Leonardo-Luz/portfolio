@@ -5,7 +5,7 @@
     "project": "Project",
     "projects": "Projects",
     "clipboard_toast": "Copied to clipboard",
-    "education": "Education",
+    "education": "Studies",
     "experience": "Experience",
     "technologies": "Technologies",
     "skills": "Skills",
@@ -56,7 +56,8 @@
     "star": "Star",
     "starred": "Starred",
     "repository": "Git Repository",
-    "deploy": "Live"
+    "deploy": "Live",
+    "more": "More Projects"
   },
   "toast": {
     "phone_to_clipboard": "",

@@ -18,7 +18,7 @@ export function ProjectHeader({ tag, description }: ProjectHeaderProps) {
   const tg = useTranslations("global")
 
   return (
-    <Card className="w-[60%] mb-8">
+    <Card className="w-[80%] md:w-[60%] mb-8">
       <CardHeader>
         <CardTitle className="text-2xl">{tg("projects")} - {t(tag)}</CardTitle>
         <CardDescription className="flex flex-wrap gap-2">

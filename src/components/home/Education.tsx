@@ -3,6 +3,7 @@
 import { StudyCard } from "@/components/home/StudyCard"
 import { useStudies } from "@/hooks/useStudies"
 import { useTranslations } from "next-intl"
+import { Card } from "@/components/ui/card"
 
 export default function Education() {
   const tg = useTranslations("global")
@@ -14,7 +15,9 @@ export default function Education() {
       {
         allStudies.length > 0 ?
           <>
-            <h1 className="text-3xl font-extrabold">{tg("education")}</h1>
+            <Card className="w-full flex items-center">
+              <h1 className="text-3xl font-extrabold">{tg("education")}</h1>
+            </Card>
             {
               allStudies.map((study, index) => (
                 <StudyCard

@@ -31,16 +31,18 @@ export default function Projects() {
       <Tabs defaultValue={tags.includes(curTab) ? curTab : defaultTab} className="w-full">
         <TabsList className="mb-8 self-center w-full flex flex-row justify-between">
           <div className="flex flex-row gap-3">
-            {tags.map((tag, index) => (
-              <TabsTrigger
-                onClick={() => setCurTab(tag)}
-                key={index}
-                className="cursor-pointer"
-                value={tag}
-              >
-                {t(tag)}
-              </TabsTrigger>
-            ))}
+            {
+              tags.map((tag, index) => (
+                <TabsTrigger
+                  onClick={() => setCurTab(tag)}
+                  key={index}
+                  className="cursor-pointer"
+                  value={tag}
+                >
+                  {t(tag)}
+                </TabsTrigger>
+              ))
+            }
           </div>
         </TabsList>
         {tags.map((tag, index) => {
@@ -58,20 +60,22 @@ export default function Projects() {
               value={tag}
               className="flex flex-col w-full justify-center items-center gap-8"
             >
-              {paginatedProjects.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  id={project.id}
-                  tag={project.tag}
-                  title={project.title}
-                  description={project.description}
-                  imageUrl={project.imageUrl}
-                  tecnologies={project.tecnologies}
-                  gitLink={project.gitLink}
-                  repo={project.repo}
-                  projectLink={project.projectLink}
-                />
-              ))}
+              {
+                paginatedProjects.map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    id={project.id}
+                    tag={project.tag}
+                    title={project.title}
+                    description={project.description}
+                    imageUrl={project.imageUrl}
+                    tecnologies={project.tecnologies}
+                    gitLink={project.gitLink}
+                    repo={project.repo}
+                    projectLink={project.projectLink}
+                  />
+                ))
+              }
 
               <ProjectPagination
                 page={page}

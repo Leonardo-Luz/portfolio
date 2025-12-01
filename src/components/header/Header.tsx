@@ -64,9 +64,9 @@ export function Header() {
 
   return (
     <div className="mb-20 w-full">
-      <nav className="fixed flex flex-row w-full justify-between items-center py-2 z-50">
+      <nav className="fixed flex flex-row w-full items-center py-2 z-50 justify-center md:justify-between">
         <div className="px-4 py-2">
-          <NavLink href="/">
+          <NavLink className="hidden md:flex" href="/">
             <span className="text-2xl font-bold">Leonardo Luz</span>
           </NavLink>
         </div>

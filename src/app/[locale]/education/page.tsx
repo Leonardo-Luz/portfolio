@@ -1,6 +1,7 @@
 'use client'
 
 import { StudyCard } from "@/components/StudyCard"
+import { Card } from "@/components/ui/card"
 import { useStudies } from "@/hooks/useStudies"
 import { useTranslations } from "next-intl"
 
@@ -14,7 +15,9 @@ export default function EducationExperience() {
       {
         allStudies.length > 0 ?
           <>
-            <h1 className="text-3xl font-extrabold">{tg("education")}</h1>
+            <Card className="w-[80%] md:w-[60%] flex items-center">
+              <h1 className="text-3xl font-extrabold">{tg("education")}</h1>
+            </Card>
             {
               allStudies.map((study, index) => (
                 <StudyCard

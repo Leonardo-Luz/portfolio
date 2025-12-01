@@ -26,6 +26,7 @@ export default function Project({ params }: ProjectProps) {
         tecnologies={project.tecnologies}
         gitLink={project.gitLink}
         projectLink={project.projectLink}
+        forceImage
       />
     </div>
   )

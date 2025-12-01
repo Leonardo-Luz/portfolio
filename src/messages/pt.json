@@ -5,14 +5,14 @@
     "project": "Projeto",
     "projects": "Projetos",
     "clipboard_toast": "Copiado para a área de transferência",
-    "education": "Educação",
+    "education": "Estudos",
     "experience": "Experiência",
     "technologies": "Tecnologias",
     "skills": "Habilidades",
     "more": "Mais"
   },
   "about_me": {
-    "greeter": "Ola, sou o",
+    "greeter": "Olá, sou o",
     "one_line_intro": "Desenvolvedor full-stack e estudante de Tecnologia no IFRS, apaixonado por criar soluções limpas e eficientes.",
     "introduction_desc": "Sou estudante de Tecnologia no Instituto Federal do Rio Grande do Sul – Campus Osório (2023–2025), cursando Análise e Desenvolvimento de Sistemas. Minha experiência envolve tanto o desenvolvimento frontend quanto o backend, utilizando tecnologias como TypeScript, React, Next.js, Tailwind, Spring e Golang, além de Rust, Lua e Python em projetos diversos. No meu dia a dia, faço uso de ferramentas como Git, Docker, Neovim e Linux para otimizar o fluxo de trabalho e aumentar a produtividade. Com bases sólidas em engenharia de software, APIs RESTful, padrões de projeto, bancos de dados e containerização, busco desenvolver soluções limpas e bem estruturadas. Além da parte técnica, valorizo resolução de problemas, adaptabilidade, criatividade, trabalho em equipe e aprendizado contínuo.",
     "career": "Desenvolvedor Fullstack",
@@ -56,7 +56,8 @@
     "star": "Star",
     "starred": "Starred",
     "repository": "Repositorio do Git",
-    "deploy": "Live"
+    "deploy": "Live",
+    "more": "Mais Projetos"
   },
   "toast": {
     "phone_to_clipboard": "",

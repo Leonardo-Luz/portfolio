@@ -57,7 +57,7 @@ export function ProjectCard(props: ProjectCardProps) {
           </CardDescription>
         </CardHeader>
 
-        <CardFooter className="flex flex-row gap-3 items-center justify-end">
+        <CardFooter className="flex flex-row gap-3 items-center justify-between">
           <Button
             variant="ghost"
             asChild
@@ -66,58 +66,60 @@ export function ProjectCard(props: ProjectCardProps) {
               {tg("more")}
             </Link>
           </Button>
-          {
-            props.projectLink && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" asChild>
-                    <a href={props.projectLink} target="_blank">
-                      <ExternalLink />
-                    </a>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  {t("deploy")}
-                </TooltipContent>
-              </Tooltip>
-            )
-          }
-          {
-            (!repoIsLoading && props.gitLink) && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" asChild>
-                    <a href={props.gitLink} target="_blank">
-                      <Github />
-                    </a>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  {t("repository")}
-                </TooltipContent>
-              </Tooltip>
-            )
-          }
-          {
-            (!repoIsLoading && props.gitLink) && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button className="group" variant="outline" onClick={() => toggleStar()}>
-                    {
-                      repoData?.starred ?
-                        <Star className="fill-current text-foreground group-hover:text-accent-foreground" />
-                        :
-                        <Star />
-                    }
-                    <span>{repoData?.stargazers_count != undefined ? repoData?.stargazers_count : "-"}</span>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  {t(repoData?.starred ? "starred" : "star")}
-                </TooltipContent>
-              </Tooltip>
-            )
-          }
+          <div className="flex flex-row gap-3 items-center justify-end">
+            {
+              props.projectLink && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="outline" size="icon" asChild>
+                      <a href={props.projectLink} target="_blank">
+                        <ExternalLink />
+                      </a>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {t("deploy")}
+                  </TooltipContent>
+                </Tooltip>
+              )
+            }
+            {
+              (!repoIsLoading && props.gitLink) && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="outline" size="icon" asChild>
+                      <a href={props.gitLink} target="_blank">
+                        <Github />
+                      </a>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {t("repository")}
+                  </TooltipContent>
+                </Tooltip>
+              )
+            }
+            {
+              (!repoIsLoading && props.gitLink) && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button className="group" variant="outline" onClick={() => toggleStar()}>
+                      {
+                        repoData?.starred ?
+                          <Star className="fill-current text-foreground group-hover:text-accent-foreground" />
+                          :
+                          <Star />
+                      }
+                      <span>{repoData?.stargazers_count != undefined ? repoData?.stargazers_count : "-"}</span>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {t(repoData?.starred ? "starred" : "star")}
+                  </TooltipContent>
+                </Tooltip>
+              )
+            }
+          </div>
         </CardFooter>
       </Card>
     </div>

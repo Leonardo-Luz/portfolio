@@ -271,5 +271,19 @@
       "pt": "Neovim é uma refatoração e continuação do Vim."
     },
     "docs": "https://neovim.io/doc/"
+  },
+  "Flutter": {
+    "desc": {
+      "en": "Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+      "pt": "Flutter é o kit de ferramentas de UI do Google para criar aplicações compiladas nativamente para mobile, web e desktop a partir de uma única base de código."
+    },
+    "docs": "https://docs.flutter.dev/"
+  },
+  "Dart": {
+    "desc": {
+      "en": "Dart is a client-optimized programming language for building fast applications on any platform.",
+      "pt": "Dart é uma linguagem de programação otimizada para o desenvolvimento de aplicações rápidas em qualquer plataforma."
+    },
+    "docs": "https://dart.dev/guides"
   }
 }
