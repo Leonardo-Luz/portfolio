@@ -16,7 +16,7 @@ export function CVDownloadButton() {
           </Link>
         </Button>
       </TooltipTrigger>
-      <TooltipContent>Download Curricul Vitae</TooltipContent>
+      <TooltipContent>Download Curriculum Vitae</TooltipContent>
     </Tooltip>
   )
 }
