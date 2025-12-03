@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from "react"
-import { CircleQuestionMark, Flag, Settings } from "lucide-react";
+import { CircleQuestionMark, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
@@ -10,23 +10,18 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useTranslations } from "next-intl";
-import { usePathname, Link } from "@/i18n/navigation";
-import { LanguageMenuItem } from "./LanguageMenuItem";
 import { GithubAuthMenuItem } from "./GithubAuthMenuItem";
 import { useHelp } from "@/context/HelpProvider";
 import { ToggleTheme } from "../ToggleTheme";
+import { LanguageDropMenu } from "./LanguageDropMenu";
+import { LanguageToggle } from "./LanguageToggle";
 
 export function Options() {
   const { setOpen: setOpenHelp } = useHelp()
-  const pathname = usePathname()
   const t = useTranslations("options")
-  const tg = useTranslations("global")
 
   const [open, setOpen] = useState(false)
   const triggerRef = useRef<HTMLButtonElement | null>(null)
@@ -63,27 +58,7 @@ export function Options() {
           <DropdownMenuLabel>{t("settings")}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <GithubAuthMenuItem />
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
-              {t("toggle_language")}
-            </DropdownMenuSubTrigger>
-            <DropdownMenuSubContent>
-              <LanguageMenuItem code="pt">
-                <span>{tg("pt_br")}</span>
-                <Flag />
-              </LanguageMenuItem>
-              <DropdownMenuItem asChild>
-                <Link
-                  className="flex flex-row justify-between items-center gap-8"
-                  href={pathname}
-                  locale="en"
-                >
-                  <span>{tg("en")}</span>
-                  <Flag />
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuSubContent>
-          </DropdownMenuSub>
+          <LanguageToggle />
           <ToggleTheme />
           <DropdownMenuItem
             className="flex flex-row justify-between items-center gap-8 w-full"

@@ -2,7 +2,7 @@
 
 export function Footer() {
   return (
-    <footer className="mt-8 flex flex-row w-full p-4 items-center justify-center bg-card">
+    <footer className="mt-8 pb-20 md:pb-4 flex flex-row w-full p-4 items-center justify-center bg-card">
       <h1>Desenvolvido por Leonardo Luz</h1>
     </footer>
   )

@@ -63,18 +63,23 @@ export function Header() {
   }, [pathname, router, links])
 
   return (
-    <div className="mb-20 w-full">
-      <nav className="fixed flex flex-row w-full items-center py-2 z-50 justify-center md:justify-between">
-        <div className="px-4 py-2">
-          <NavLink className="hidden md:flex" href="/">
-            <span className="text-2xl font-bold">Leonardo Luz</span>
-          </NavLink>
-        </div>
-        <div className="flex flex-row gap-3 px-2 pr-4 py-2">
-          {links.map((link, i) => (
-            <NavLink key={i} href={link.href}>{link.label}</NavLink>
-          ))}
-          <Options />
+    <div className="mb-10 md:mb-20 w-full">
+      <nav className="fixed bottom-0 md:top-0 md:bottom-auto h-16 md:h-20 w-full flex flex-row items-center z-0">
+        <div className="z-100 flex flex-row w-full py-2 justify-center md:justify-between px-4">
+          <div className="hidden md:flex px-4 py-2">
+            <NavLink href="/">
+              <span className="text-2xl font-bold">Leonardo Luz</span>
+            </NavLink>
+          </div>
+
+          <div className="flex flex-row gap-3 px-2 pr-4 py-2 backdrop-blur-md rounded-md md:backdrop-blur-none">
+            {links.map((link, i) => (
+              <NavLink key={i} href={link.href}>
+                {link.label}
+              </NavLink>
+            ))}
+            <Options />
+          </div>
         </div>
       </nav>
     </div>
