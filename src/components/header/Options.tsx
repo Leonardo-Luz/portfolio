@@ -16,7 +16,6 @@ import { useTranslations } from "next-intl";
 import { GithubAuthMenuItem } from "./GithubAuthMenuItem";
 import { useHelp } from "@/context/HelpProvider";
 import { ToggleTheme } from "../ToggleTheme";
-import { LanguageDropMenu } from "./LanguageDropMenu";
 import { LanguageToggle } from "./LanguageToggle";
 
 export function Options() {
