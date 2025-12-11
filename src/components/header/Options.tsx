@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from "react"
+import { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } from "react"
 import { Settings, CircleQuestionMark } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
@@ -46,10 +46,10 @@ export function Options() {
     return () => window.removeEventListener("resize", update)
   }, [])
 
-  const toggleOpen = () => {
+  const toggleOpen = useCallback(() => {
     if (isMobile) setOpenMobile(prev => !prev)
     else setOpenDesktop(prev => !prev)
-  }
+  }, [setOpenMobile, setOpenDesktop, isMobile])
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -70,7 +70,7 @@ export function Options() {
     }
     window.addEventListener("keydown", handler)
     return () => window.removeEventListener("keydown", handler)
-  }, [openDesktop, openMobile, isMobile])
+  }, [openDesktop, openMobile, isMobile, toggleOpen])
 
   useEffect(() => {
     if (isMobile)
@@ -133,7 +133,7 @@ export function Options() {
   )
 }
 
-function OptionsListDesktop({ t, setOpenHelp }: any) {
+function OptionsListDesktop({ t, setOpenHelp }: { t: ReturnType<typeof useTranslations>, setOpenHelp: Dispatch<SetStateAction<boolean>> }) {
   return (
     <>
       <DropdownMenuLabel>{t("settings")}</DropdownMenuLabel>
@@ -155,7 +155,7 @@ function OptionsListDesktop({ t, setOpenHelp }: any) {
   )
 }
 
-function OptionsListMobile({ t, setOpenHelp }: any) {
+function OptionsListMobile({ t, setOpenHelp }: { t: ReturnType<typeof useTranslations>, setOpenHelp: Dispatch<SetStateAction<boolean>> }) {
   return (
     <div className="space-y-2 px-4">
       <GithubAuthDrawerItem />
