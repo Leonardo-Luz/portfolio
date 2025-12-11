@@ -15,7 +15,7 @@ export default function EducationExperience() {
       {
         allStudies.length > 0 ?
           <>
-            <Card className="w-[80%] md:w-[60%] flex items-center">
+            <Card className="w-[80%] lg:w-[60%] flex items-center">
               <h1 className="text-3xl font-extrabold">{tg("education")}</h1>
             </Card>
             {

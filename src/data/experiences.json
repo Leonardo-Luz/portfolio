@@ -1,2 +1,18 @@
 [
+  {
+    "enterprise": "IFRS - Campus Osório",
+    "interval": "2025 - 2025",
+    "role": {
+      "en": "Scholarship Student – Fullstack Web Developer",
+      "pt": "Bolsista – Desenvolvedor Fullstack Web"
+    },
+    "style": {
+      "en": "Hybrid",
+      "pt": "Híbrido"
+    },
+    "description": {
+      "en": "I worked as a scholarship student on an e-commerce project, serving as a fullstack web developer. On the backend, I used Fastify and Prisma, along with Argon2 for password hashing and JWT for server-side authentication through cookies, building a RESTful API. On the frontend, I used React, Next.js, Tailwind CSS, Shadcn, and Next-Themes to create a modern and responsive interface. The project was developed collaboratively using the Kanban agile method and weekly meetings.",
+      "pt": "Atuei como bolsista em um projeto de e-commerce, desempenhando a função de desenvolvedor fullstack web. No backend, utilizei Fastify e Prisma, além de Argon2 para hashing de senhas e JWT para autenticação server-side via cookies, desenvolvendo uma API RESTful. No frontend, utilizei React, Next.js, Tailwind CSS, Shadcn e Next-Themes para criar uma interface moderna e responsiva. O projeto foi desenvolvido em grupo, seguindo o método ágil Kanban e realizando reuniões semanais."
+    }
+  }
 ]

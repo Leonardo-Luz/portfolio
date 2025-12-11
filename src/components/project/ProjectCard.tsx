@@ -37,12 +37,12 @@ export function ProjectCard(props: ProjectCardProps) {
   return (
     <div
       className={cn(
-        "flex gap-8 items-stretch justify-center max-w-5xl w-[80%] md:w-[60%]",
-        props.invert ? "flex-col-reverse md:flex-row-reverse" : "flex-col-reverse md:flex-row"
+        "flex gap-8 items-stretch justify-center max-w-5xl w-[80%] lg:w-[60%]",
+        props.invert ? "flex-col-reverse lg:flex-row-reverse" : "flex-col-reverse lg:flex-row"
       )}
     >
       <ProjectImage imageUrl={props.imageUrl} force={props.forceImage} />
-      <Card className="w-full md:w-[70%]">
+      <Card className="w-full lg:w-[70%]">
         <CardHeader>
           <CardTitle className="text-2xl font-extrabold">
             {

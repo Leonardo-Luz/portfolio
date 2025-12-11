@@ -1,76 +1,175 @@
 'use client'
 
-import { useEffect, useState, useRef } from "react"
-import { CircleQuestionMark, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { useEffect, useRef, useState } from "react"
+import { Settings, CircleQuestionMark } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { useTranslations } from "next-intl";
-import { GithubAuthMenuItem } from "./GithubAuthMenuItem";
-import { useHelp } from "@/context/HelpProvider";
-import { ToggleTheme } from "../ToggleTheme";
-import { LanguageToggle } from "./LanguageToggle";
+} from "@/components/ui/dropdown-menu"
+import {
+  Drawer,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger
+} from "@/components/ui/drawer"
+
+import { GithubAuthMenuItem } from "./GithubAuthMenuItem"
+import { GithubAuthDrawerItem } from "./GithubAuthDrawerItem"
+import { LanguageToggle } from "./LanguageToggle"
+import { LanguageDrawerToggle } from "./LanguageDrawerToggle"
+import { ToggleTheme } from "../ToggleTheme"
+import { ToggleDrawerTheme } from "../ToggleDrawerTheme"
+import { useTranslations } from "next-intl"
+import { useHelp } from "@/context/HelpProvider"
 
 export function Options() {
   const { setOpen: setOpenHelp } = useHelp()
   const t = useTranslations("options")
 
-  const [open, setOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [openDesktop, setOpenDesktop] = useState(false)
+  const [openMobile, setOpenMobile] = useState(false)
+
   const triggerRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth <= 1242)
+    update()
+    window.addEventListener("resize", update)
+    return () => window.removeEventListener("resize", update)
+  }, [])
+
+  const toggleOpen = () => {
+    if (isMobile) setOpenMobile(prev => !prev)
+    else setOpenDesktop(prev => !prev)
+  }
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const active = document.activeElement
-      if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || (active as HTMLElement).isContentEditable))
-        return
+      const block =
+        active &&
+        (active.tagName === "INPUT" ||
+          active.tagName === "TEXTAREA" ||
+          (active as HTMLElement).isContentEditable)
 
+      if (block) return
 
       if (e.key === "o") {
         e.preventDefault()
-        setOpen((prev) => !prev)
-        if (!open) triggerRef.current?.focus()
+        toggleOpen()
+        if (!openDesktop && !openMobile) triggerRef.current?.focus()
       }
     }
     window.addEventListener("keydown", handler)
     return () => window.removeEventListener("keydown", handler)
-  }, [open])
+  }, [openDesktop, openMobile, isMobile])
+
+  useEffect(() => {
+    if (isMobile)
+      setOpenDesktop(false)
+    else
+      setOpenMobile(false)
+  }, [isMobile])
 
   return (
     <Tooltip>
-      <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger asChild>
-          <TooltipTrigger asChild>
-            <Button ref={triggerRef} variant="outline" size="icon">
+      <div className="hidden lg:block">
+        <DropdownMenu open={openDesktop} onOpenChange={setOpenDesktop}>
+          <DropdownMenuTrigger asChild>
+            <TooltipTrigger asChild>
+              <Button
+                ref={triggerRef}
+                variant="outline"
+                size="icon"
+                onClick={toggleOpen}
+              >
+                <Settings />
+              </Button>
+            </TooltipTrigger>
+          </DropdownMenuTrigger>
+
+          <DropdownMenuContent align="end">
+            <OptionsListDesktop t={t} setOpenHelp={setOpenHelp} />
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
+      <div className="block lg:hidden">
+        <Drawer open={openMobile} onOpenChange={setOpenMobile}>
+          <DrawerTrigger asChild>
+            <Button
+              ref={triggerRef}
+              variant="outline"
+              size="icon"
+              onClick={toggleOpen}
+            >
               <Settings />
             </Button>
-          </TooltipTrigger>
-        </DropdownMenuTrigger>
+          </DrawerTrigger>
 
-        <DropdownMenuContent align="center">
-          <DropdownMenuLabel>{t("settings")}</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <GithubAuthMenuItem />
-          <LanguageToggle />
-          <ToggleTheme />
-          <DropdownMenuItem
-            className="flex flex-row justify-between items-center gap-8 w-full"
-            onClick={() => setOpenHelp(prev => !prev)}
-          >
-            <span>{t("help")}</span>
-            <CircleQuestionMark />
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+          <DrawerContent>
+            <DrawerHeader>
+              <DrawerTitle>{t("settings")}</DrawerTitle>
+            </DrawerHeader>
+
+            <OptionsListMobile t={t} setOpenHelp={setOpenHelp} />
+            <DrawerFooter />
+          </DrawerContent>
+        </Drawer>
+      </div>
+
       <TooltipContent>
         <span>{t("settings")}</span>
       </TooltipContent>
-    </Tooltip >
+    </Tooltip>
+  )
+}
+
+function OptionsListDesktop({ t, setOpenHelp }: any) {
+  return (
+    <>
+      <DropdownMenuLabel>{t("settings")}</DropdownMenuLabel>
+      <DropdownMenuSeparator />
+      <GithubAuthMenuItem />
+      <LanguageToggle />
+      <ToggleTheme />
+      <DropdownMenuSeparator />
+
+      <Button
+        className="flex flex-row justify-between items-center gap-8 w-full text-sm"
+        onClick={() => setOpenHelp((prev: boolean) => !prev)}
+        variant="ghost"
+      >
+        <span>{t("help")}</span>
+        <CircleQuestionMark />
+      </Button>
+    </>
+  )
+}
+
+function OptionsListMobile({ t, setOpenHelp }: any) {
+  return (
+    <div className="space-y-2 px-4">
+      <GithubAuthDrawerItem />
+      <LanguageDrawerToggle />
+      <ToggleDrawerTheme />
+
+      <Button
+        className="flex flex-row justify-between items-center gap-8 w-full"
+        onClick={() => setOpenHelp((prev: boolean) => !prev)}
+        variant="ghost"
+      >
+        <span>{t("help")}</span>
+        <CircleQuestionMark />
+      </Button>
+    </div>
   )
 }

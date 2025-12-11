@@ -2,11 +2,11 @@
 
 import { Moon, Sun, SunMoon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { DropdownMenuItem } from "./ui/dropdown-menu";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Button } from "./ui/button";
 
-export function ToggleTheme() {
+export function ToggleDrawerTheme() {
   const t = useTranslations("options")
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
@@ -29,9 +29,10 @@ export function ToggleTheme() {
   if (!mounted) return null
 
   return (
-    <DropdownMenuItem
-      className="cursor-pointer flex flex-row justify-between items-center gap-8"
+    <Button
+      className="w-full flex flex-row justify-between items-center gap-8"
       onClick={changeTheme}
+      variant="ghost"
     >
       <span>{t("toggle_theme")}</span>
       {
@@ -39,6 +40,6 @@ export function ToggleTheme() {
           theme == "light" ? <Sun /> :
             <SunMoon />
       }
-    </DropdownMenuItem>
+    </Button>
   )
 }

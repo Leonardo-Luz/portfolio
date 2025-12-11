@@ -1,16 +1,16 @@
 "use client";
 
-import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import cookies from "js-cookie"
 import { Link, usePathname } from "@/i18n/navigation";
 import { ReactNode } from "react";
+import { Button } from "../ui/button";
 
 interface LanguageMenuItemProps {
   code: string;
   children: ReactNode
 }
 
-export function LanguageMenuItem({ code, children }: LanguageMenuItemProps) {
+export function LanguageDrawerItem({ code, children }: LanguageMenuItemProps) {
   const pathname = usePathname();
 
   const persistLocale = () => {
@@ -18,15 +18,14 @@ export function LanguageMenuItem({ code, children }: LanguageMenuItemProps) {
   };
 
   return (
-    <DropdownMenuItem asChild>
+    <Button variant="ghost" className="w-full flex flex-row items-center justify-between" asChild>
       <Link
-        className="cursor-pointer flex flex-row justify-between items-center gap-8"
         onClick={persistLocale}
         href={pathname}
         locale={code}
       >
         {children}
       </Link>
-    </DropdownMenuItem>
+    </Button>
   );
 }

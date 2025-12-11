@@ -19,7 +19,8 @@
     "Git",
     "Docker",
     "Neovim",
-    "Arch Linux"
+    "Arch Linux",
+    "Tmux"
   ],
   "key_technologies": {
     "Frontend": [

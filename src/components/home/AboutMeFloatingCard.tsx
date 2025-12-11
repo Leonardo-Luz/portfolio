@@ -22,7 +22,7 @@ export default function AboutMeFloatingCard() {
   const t = useTranslations("about_me")
 
   return (
-    <Card className="relative self-center w-[80%] md:fixed md:self-start md:w-[40%]">
+    <Card className="z-0 relative self-center w-[80%] lg:fixed lg:self-start lg:w-[40%]">
       <CardHeader className="flex flex-row justify-between items-center">
         <div className="flex flex-col justify-between">
           <CardTitle className="text-xl">{t("greeter")} Leonardo Luz - {age} {t("age")}</CardTitle>

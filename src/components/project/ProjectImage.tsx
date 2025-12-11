@@ -9,7 +9,7 @@ export default function ExpandableCard(props: { imageUrl: string, force?: boolea
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className={cn("relative w-full h-[80vh] md:w-[30%] md:h-auto overflow-hidden cursor-pointer", props.force ? "block" : "hidden md:block")}>
+        <Card className={cn("relative w-full h-[80vh] lg:w-[30%] lg:h-auto overflow-hidden cursor-pointer", props.force ? "block" : "hidden lg:block")}>
           <Image
             src={props.imageUrl}
             alt="project card"

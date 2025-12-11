@@ -21,7 +21,7 @@ export default function AboutMe() {
 
   return (
     <div className="flex flex-col w-full h-full items-center">
-      <Card className="w-[80%] md:w-[60%]">
+      <Card className="w-[80%] lg:w-[60%]">
         <CardHeader>
           <CardTitle className="text-2xl">{t("greeter")} Leonardo Luz ({age})</CardTitle>
           <CardDescription className="flex flex-col gap-2 mt-2">
