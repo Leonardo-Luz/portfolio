@@ -285,5 +285,33 @@
       "pt": "Dart é uma linguagem de programação otimizada para o desenvolvimento de aplicações rápidas em qualquer plataforma."
     },
     "docs": "https://dart.dev/guides"
+  },
+  "Node": {
+    "desc": {
+      "en": "Node.js is a JavaScript runtime built on Chrome's V8 engine for building fast and scalable server-side applications.",
+      "pt": "Node.js é um ambiente de execução JavaScript baseado no motor V8 do Chrome para construção de aplicações de servidor rápidas e escaláveis."
+    },
+    "docs": "https://nodejs.org/en/docs"
+  },
+  "NestJS": {
+    "desc": {
+      "en": "NestJS is a progressive Node.js framework for building efficient, scalable, and maintainable server-side applications.",
+      "pt": "NestJS é um framework progressivo para Node.js voltado à construção de aplicações de servidor eficientes, escaláveis e de fácil manutenção."
+    },
+    "docs": "https://docs.nestjs.com"
+  },
+  "Swagger": {
+    "desc": {
+      "en": "Swagger is a set of tools for designing, documenting, and testing RESTful APIs using the OpenAPI specification.",
+      "pt": "Swagger é um conjunto de ferramentas para projetar, documentar e testar APIs REST utilizando a especificação OpenAPI."
+    },
+    "docs": "https://swagger.io/docs"
+  },
+  "Jest": {
+    "desc": {
+      "en": "Jest is a JavaScript testing framework designed to ensure correctness with a focus on simplicity and developer experience.",
+      "pt": "Jest é um framework de testes para JavaScript projetado para garantir a qualidade do código com foco em simplicidade e experiência do desenvolvedor."
+    },
+    "docs": "https://jestjs.io/docs/getting-started"
   }
 }

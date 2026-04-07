@@ -19,6 +19,22 @@
   {
     "tag": "backend",
     "title": {
+      "en": "Stock management API",
+      "pt": "API de gerenciamento de estoque"
+    },
+    "description": {
+      "en": "A stock management REST API built with NestJS, featuring authentication with access and refresh tokens, comprehensive API documentation using Swagger, and automated testing with Jest.",
+      "pt": "Uma API REST de gerenciamento de estoque desenvolvida com NestJS, com autenticação via access e refresh tokens, documentação completa com Swagger e testes automatizados utilizando Jest."
+    },
+    "gitLink": "https://github.com/Leonardo-Luz/node-stock-api",
+    "repo": "node-stock-api",
+    "projectLink": "https://node-stock-api-production.up.railway.app",
+    "imageUrl": "/globe.svg",
+    "tecnologies": ["Node", "Typescript", "NestJS", "Swagger", "Jest"]
+  },
+  {
+    "tag": "backend",
+    "title": {
       "en": "Simple Websocket Server",
       "pt": "Servidor Websocket Simples"
     },

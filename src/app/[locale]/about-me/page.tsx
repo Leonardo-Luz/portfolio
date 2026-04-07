@@ -14,7 +14,7 @@ import { CVDownloadButton } from "@/components/CVDownloadButton";
 export default function AboutMe() {
   const locale = useLocale() as "pt" | "en"
 
-  const { age, tools, key_technologies, skills, linkedin, email, phone, twitch, discord, github } = useProfile()
+  const { age, studyTime, workTime, tools, key_technologies, skills, linkedin, email, phone, twitch, discord, github } = useProfile()
 
   const t = useTranslations("about_me")
   const tg = useTranslations("global")
@@ -23,7 +23,7 @@ export default function AboutMe() {
     <div className="flex flex-col w-full h-full items-center">
       <Card className="w-[80%] lg:w-[60%]">
         <CardHeader>
-          <CardTitle className="text-2xl">{t("greeter")} Leonardo Luz ({age})</CardTitle>
+          <CardTitle className="text-2xl">Leonardo Luz - {age} {t("age")}</CardTitle>
           <CardDescription className="flex flex-col gap-2 mt-2">
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">{t("career")}</Badge>
@@ -91,12 +91,12 @@ export default function AboutMe() {
         <Separator />
 
         <CardContent className="flex flex-row justify-between">
-          <span>{t("projects_flex")}</span>
-          <span>{t("study_flex")}</span>
-          {/* <span>{t("experience_flex")}</span> */}
+          <span className="text-start">{t("projects_flex")}</span>
+          {/* <span className="text-center">+{workTime} {t("experience_flex")}</span> */}
+          <span className="text-end">+{studyTime} {t("study_flex")}</span>
         </CardContent>
 
-        <CardFooter className="flex flex-row justify-between items-center">
+        <CardFooter className="flex flex-wrap gap-4 justify-between items-center">
           <div className="flex flex-row gap-4">
             <ContactLink href={`https://github.com/${github}`} tooltip="Github">
               <Github />

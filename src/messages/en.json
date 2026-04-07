@@ -12,17 +12,17 @@
     "more": "More"
   },
   "about_me": {
-    "greeter": "Hi, im",
-    "one_line_intro": "Full-stack developer and Technology student at IFRS, passionate about building clean and efficient solutions.",
-    "introduction_desc": "I am a Technology student at Instituto Federal do Rio Grande do Sul – Campus Osório (2023–2025), pursuing a degree in Systems Analysis and Development. My experience spans both frontend and backend development, working with technologies such as TypeScript, React, Next.js, Tailwind, Spring, and Golang, as well as Rust, Lua and Python in miscellaneous projects. In my daily workflow, I rely on tools like Git, Docker, Neovim, and Linux to streamline development and maintain productivity. With solid foundations in software engineering, RESTful APIs, design patterns, databases, and containerization, I focus on building clean and well-structured solutions. Alongside technical expertise, I value problem-solving, adaptability, creativity, teamwork, and continuous self-learning.",
+    "greeter": "Hi, i'm",
+    "one_line_intro": "Fullstack developer focused on backend, passionate about CLI tools and dedicated to building clean, efficient, and scalable solutions.",
+    "introduction_desc": "I am a fullstack developer with a backend focus, graduated from Instituto Federal do Rio Grande do Sul in Systems Analysis and Development, with a GPA of 9.3 and a top-graded final project. I have experience building both frontend and backend applications using technologies such as TypeScript, React, Next.js, Tailwind, Spring, and Golang, as well as Rust, Lua, and Python across various projects. In my daily workflow, I rely on tools like Git, Docker, Neovim, and Linux to optimize productivity and streamline development processes. I have a solid foundation in software engineering, RESTful API design, design patterns, databases, and containerization, always aiming to deliver well-structured and maintainable solutions. Beyond technical skills, I value problem-solving, adaptability, creativity, teamwork, and continuous learning.",
     "career": "Fullstack Developer",
     "phone_toast": "Phone Number copied to clipboard",
     "phone": "Phone Number",
     "introduction": "Introduction",
     "tools": "Tools",
     "projects_flex": "+50 Projects Open-Source",
-    "study_flex": "+8 Years of Study",
-    "experience_flex": "+0 Years of profissional Experience",
+    "study_flex": "Years of Study",
+    "experience_flex": "Years of profissional Experience",
     "more": "More about me",
     "age": "years old"
   },

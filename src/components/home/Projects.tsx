@@ -29,21 +29,19 @@ export default function Projects() {
     <div className="flex flex-col justify-center items-center h-full w-full">
       <ProjectHeader tag={curTab} />
       <Tabs defaultValue={tags.includes(curTab) ? curTab : defaultTab} className="w-full">
-        <TabsList className="mb-8 self-center w-full flex flex-row justify-between">
-          <div className="flex flex-row gap-3">
-            {
-              tags.map((tag, index) => (
-                <TabsTrigger
-                  onClick={() => setCurTab(tag)}
-                  key={index}
-                  className="cursor-pointer"
-                  value={tag}
-                >
-                  {t(tag)}
-                </TabsTrigger>
-              ))
-            }
-          </div>
+        <TabsList className="mb-8 self-center w-full flex flex-wrap h-full justify-between">
+          {
+            tags.map((tag, index) => (
+              <TabsTrigger
+                onClick={() => setCurTab(tag)}
+                key={index}
+                className="cursor-pointer"
+                value={tag}
+              >
+                {t(tag)}
+              </TabsTrigger>
+            ))
+          }
         </TabsList>
         {tags.map((tag, index) => {
           const filteredProjects = projects

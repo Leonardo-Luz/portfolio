@@ -23,9 +23,9 @@ export default function AboutMeFloatingCard() {
 
   return (
     <Card className="relative self-center w-[80%] lg:fixed lg:self-start lg:w-[40%]">
-      <CardHeader className="flex flex-row justify-between items-center">
+      <CardHeader className="flex flex-row justify-between items-start">
         <div className="flex flex-col justify-between">
-          <CardTitle className="text-xl">{t("greeter")} Leonardo Luz - {age} {t("age")}</CardTitle>
+          <CardTitle className="text-xl">{t("greeter")} Leonardo Luz ({age})</CardTitle>
           <CardDescription className="flex flex-col gap-2 mt-2">
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">{t("career")}</Badge>
@@ -70,12 +70,12 @@ export default function AboutMeFloatingCard() {
 
       <Separator />
 
-      <CardFooter className="flex flex-row justify-between items-center">
+      <CardFooter className="flex flex-row justify-between items-end">
         <Button variant="link" asChild>
           <Link href="/about-me">{t("more")}</Link>
         </Button>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-wrap justify-end gap-4">
           <ContactLink href={`https://github.com/${github}`} tooltip="Github">
             <Github />
           </ContactLink>

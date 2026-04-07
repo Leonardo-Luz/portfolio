@@ -25,7 +25,7 @@ export function ExperienceCard(props: ExperienceCardProps) {
   const locale = useLocale() as "pt" | "en"
 
   return (
-    <Card className="w-[60%]">
+    <Card className="w-[80%] lg:w-[60%]">
       <CardHeader>
         <CardTitle className="text-2xl font-extrabold">{props.enterprise}</CardTitle>
         <CardDescription className="flex flex-wrap gap-2">

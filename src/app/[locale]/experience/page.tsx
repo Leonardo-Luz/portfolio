@@ -1,4 +1,5 @@
 import { ExperienceCard } from "@/components/ExperienceCard"
+import { Card } from "@/components/ui/card"
 import { useExperiences } from "@/hooks/useExperiences"
 import { useTranslations } from "next-intl"
 
@@ -12,7 +13,9 @@ export default function Experience() {
       {
         allExperiences.length > 0 ?
           <>
-            <h1 className="text-3xl font-extrabold">{tg("experience")}</h1>
+            <Card className="w-[80%] lg:w-[60%] flex items-center">
+              <h1 className="text-3xl font-extrabold">{tg("experience")}</h1>
+            </Card>
             {
               allExperiences.map((experiences, index) => (
                 <ExperienceCard

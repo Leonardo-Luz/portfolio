@@ -32,31 +32,22 @@ export default function Projects() {
     <div className="flex flex-col justify-center items-center h-full w-full">
       <ProjectHeader tag={curTab} />
       <Tabs defaultValue={tags.includes(curTab) ? curTab : defaultTab} className="w-full">
-        <TabsList className="mb-4 lg:mb-8 self-center flex flex-row justify-between w-[80%] lg:w-[60%]">
-          <div className="flex flex-row gap-3">
-            {tags.map((tag, index) => (
-              <TabsTrigger
-                onClick={() => setCurTab(tag)}
-                key={index}
-                className="cursor-pointer"
-                value={tag}
-              >
-                {t(tag)}
-              </TabsTrigger>
-            ))}
-          </div>
-          <Input
-            type="text"
-            className="w-[40%] hidden lg:flex"
-            placeholder={t("search")}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+        <TabsList className="mb-4 lg:mb-8 self-center flex flex-wrap gap-3 justify-between w-[80%] lg:w-[60%] h-full">
+          {tags.map((tag, index) => (
+            <TabsTrigger
+              onClick={() => setCurTab(tag)}
+              key={index}
+              className="cursor-pointer"
+              value={tag}
+            >
+              {t(tag)}
+            </TabsTrigger>
+          ))}
         </TabsList>
 
         <Input
           type="text"
-          className="self-center w-[80%] mb-4 lg:hidden"
+          className="self-center w-[80%] lg:w-[60%] mb-4"
           placeholder={t("search")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}

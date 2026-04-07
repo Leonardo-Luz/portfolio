@@ -5,6 +5,12 @@
     "month": 11,
     "date": 7
   },
+  "study-start": {
+    "year": 2018
+  },
+  "work-start": {
+    "year": 2026
+  },
   "location": {
     "en": "Rio Grande do Sul, Brazil",
     "pt": "Rio Grande do Sul, Brasil"
@@ -14,7 +20,7 @@
   "email": "leonardo.luz.fc@gmail.com",
   "twitch": "dev_luz",
   "discord": "leonardo_lf",
-  "phone": "55 51 998543859",
+  "phone": "55 51 999051284",
   "tools": [
     "Git",
     "Docker",

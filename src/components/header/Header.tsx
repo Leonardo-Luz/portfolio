@@ -65,7 +65,7 @@ export function Header() {
 
   return (
     <div className="mb-10 lg:mb-20 w-full">
-      <nav className="fixed bottom-0 lg:top-0 lg:bottom-auto h-16 lg:h-20 w-full flex flex-row items-center z-40">
+      <nav className="fixed bottom-6 lg:top-0 lg:bottom-auto h-16 lg:h-20 w-full flex row items-center z-40">
         <div className="flex flex-row w-full py-2 justify-center lg:justify-between px-4">
           <div className="hidden lg:flex px-4 py-2">
             <NavLink href="/">
@@ -73,7 +73,7 @@ export function Header() {
             </NavLink>
           </div>
 
-          <div className="flex flex-row gap-3 px-2 pr-4 py-2 backdrop-blur-md rounded-md lg:backdrop-blur-none">
+          <div className="flex flex-wrap justify-center gap-3 px-2 pr-4 py-2 backdrop-blur-md rounded-md lg:backdrop-blur-none">
             {links.map((link, i) => i == 0 ? (
               <NavLink key={i} href={link.href}>
                 <span className="hidden lg:block">{link.label}</span>
