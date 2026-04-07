@@ -23,13 +23,13 @@ export default function AboutMeFloatingCard() {
 
   return (
     <Card className="relative self-center w-[80%] lg:fixed lg:self-start lg:w-[40%]">
-      <CardHeader className="flex flex-row justify-between items-start">
+      <CardHeader className="flex flex-row-reverse gap-3 justify-between items-center">
         <div className="flex flex-col justify-between">
           <CardTitle className="text-xl">{t("greeter")} Leonardo Luz ({age})</CardTitle>
           <CardDescription className="flex flex-col gap-2 mt-2">
             <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">{t("career")}</Badge>
-              <Badge variant="outline">
+              <Badge className="whitespace-break-spaces" variant="secondary">{t("career")}</Badge>
+              <Badge className="whitespace-break-spaces" variant="outline">
                 <MapPin />
                 <span>{location[locale]}</span>
               </Badge>

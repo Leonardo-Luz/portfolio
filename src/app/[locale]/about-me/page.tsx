@@ -47,7 +47,7 @@ export default function AboutMe() {
             src="https://avatars.githubusercontent.com/u/67484650"
             alt="profile picture"
           />
-          <p>
+          <p className="break-words hyphens-auto">
             {t("introduction_desc")}
           </p>
         </CardContent>
